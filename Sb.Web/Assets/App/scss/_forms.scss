@@ -76,6 +76,10 @@ fieldset{
   &:visited{
       color:#fff;
   }
+  // add in margin on landing page for "get started" CTA
+  .landing &{
+      margin-top: 1rem;
+  }
 }
 
 fieldset .btn,
@@ -149,78 +153,6 @@ select[disabled]:active {
     width: 0;
     overflow: hidden;
 }
-
-/* Add individual and organisation buttons 
-
-.btn-individual {
-  background: transparent url(app/img/sprite-add-individual.png) no-repeat 11px 14px;
-  margin: 0 0 0 0.5em;
-  padding: 1em 1.5em 1em 2.5em;
-}
-.btn-individual:hover,
-.btn-individual:focus,
-.btn-individual:active {
-  background: black url(app/img/sprite-add-individual.png) no-repeat 11px -146px;
-}
-.btn-organisation {
-  background: transparent url(app/img/sprite-add-organisation.png) no-repeat 11px 14px;
-  margin: 0 0 0 0.5em;
-  padding: 1em 1.5em 1em 2.5em;
-}
-.btn-organisation:hover,
-.btn-organisation:focus,
-.btn-organisation:active {
-  background: black url(app/img/sprite-add-organisation.png) no-repeat 11px -146px;
-} */
-
-
-/* Custom added button with less padding 
-
-.btn-added {
-  background: #FFFFD0;
-  border: 1px solid #cccccc;
-  color: #636563;
-  padding: 0.5em 0.5em;
-  font-size: 1.15rem;
-}*/
-
-
-/* Custom remove button with cross icon *
-
-.btn-remove {
-  background: #eeeeee url(app/img/sprite-remove.png) no-repeat 50% 0;
-  border: 1px solid #cccccc;
-  font-weight: normal;
-  min-height: 38px;
-  width: 38px;
-}
-.btn-remove:hover,
-.btn-remove:focus,
-.btn-remove:active {
-  background: black url(app/img/sprite-remove.png) no-repeat 50% -281px;
-} */
-
-
-// Form elements
-// ------------------------------------------------------------------------------------------------------
-
-/*.form-row {
-  clear: both;
-  margin: 0 0 0.25em 0;
-}
-.form-row-line {
-  border-bottom: 1px solid $brand-bg;
-  padding: 2em 0;
-}
-@media only screen and (min-width: $break-large) {
-  .input-left {
-    display: block; 
-  }
-  .input-right {
-    display: block;
-    text-align: right;
-  }
-}*/
 
 input:hover,
 input:focus,
@@ -376,17 +308,8 @@ input.larger {
 	}
 }*/
 
-/* Adding dollar symbol to input field */
-/*.input-dollar {
-  background: transparent url(app/img/ico-dollar.png) no-repeat 0 50%;
-  padding-left: 45px;
-  width: 100%;
-}*/
-
-
 // Image replacements for radio and checkboxes
 // ------------------------------------------------------------------------------------------------------
-/* http://www.thecssninja.com/css/custom-inputs-using-css */
 
 .custom-controls {
 	div {
@@ -409,9 +332,7 @@ input.larger {
 			position: absolute;
 			left: 0;
 			opacity: 0;
-			/* set background sprite */
 			+ label {
-			 // background: url(/assets/app/img/sprite-custom-controls.png) 0 0 no-repeat;
               display:inline-block;
               line-height: 1.6rem;
               margin-left: 0;
@@ -431,12 +352,10 @@ input.larger {
                 left: 30px;
             }
             &:checked +label, &:focus +label{
-                font-weight: 600;
+                font-weight: 600;                
             } 
             &:focus +label{
-              outline: rgb(94, 158, 215) auto 2px;
-
-
+               outline: $focus-checkradio-outline solid 2px;
             }  
             &:checked +label:after{
                 width: 17px;
@@ -490,94 +409,5 @@ input.larger {
 		> input ~ label:hover, > input ~ label:focus { 
 		  color: #000; 
 		}
-
-		/* checkbox styles */
-		> input[type=checkbox] {
-		
-			/* Hover & Focus styles */
-			&:hover ~ label, &:focus ~ label, ~ label:hover { 
-			  background-position: 0 -48px;
-			}
-
-			/* Checked styles */
-			&:checked {
-				~ label { 
-				  background-position: 0 -192px; 
-				}
-
-				&:hover ~ label, &:focus ~ label, ~ label:hover, ~ label:focus { 
-				  background-position: 0 -240px; 
-				}
-			}
-
-			/* Active styles */
-			&:active ~ label, ~ label:hover:active { 
-			  background-position: 0 -96px; 
-			}
-						
-			&:active:checked ~ label, &:checked ~ label:hover:active {
-			  background-position: 0 -288px;
-			}
-
-			/* Disabled styles */
-			&:disabled {
-				~ label, &:hover ~ label, &:focus ~ label, ~ label:hover, ~ label:hover:active { 
-				  background-position: 0 -145px; 
-				}
-
-				&:checked {
-					~ label, ~ label:hover, ~ label:hover:active, &:hover ~ label, &:focus ~ label { 
-					  background-position: 0 -336px; 
-					}
-				}
-			}
-		}
-
-		/* radio button styles */
-		> input[type=radio] {
-			~ label { 
-			  background-position: 0 -386px;
-			}
-
-			/* Hover & Focus styles */
-			&:hover ~ label, &:focus ~ label, ~ label:hover { 
-			  background-position: 0 -434px; 
-			}
-
-			/* Checked styles */
-			&:checked {
-				~ label { 
-				  background-position: 0 -577px;
-				}
-
-				&:hover ~ label, &:focus ~ label, ~ label:hover, ~ label:focus { 
-				  background-position: 0 -625px; 
-				}
-
-			}
-
-			/* Active styles */
-			&:active ~ label, ~ label:hover:active { 
-			  background-position: 0 -482px;
-			}
-			&:active:checked ~ label, &:checked ~ label:hover:active { 
-			  background-position: 0 -673px; 
-			}
-
-			/* Disabled styles */
-			&:disabled {
-				~ label, &:hover ~ label, &:focus ~ label, ~ label:hover, ~ label:hover:active {
-				  background-position: 0 -528px; 
-				}
-				&:checked {
-					~ label, &:hover ~ label, &:focus ~ label, ~ label:hover, ~ label:hover:active { 
-				  background-position: 0 -719px; 
-				}
-			}
-			}
-		}
 	}
-
-
 }
-
