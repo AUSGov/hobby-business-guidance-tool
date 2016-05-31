@@ -1,0 +1,23 @@
+﻿{
+  "Id": "RL10U2B",
+  "ObligationId": "OB10U2B",
+  "IsEnabled": "true",
+  "Rules": [
+    {
+      "MemberName": "OutcomeType",
+      "Operator": "Equal",
+      "TargetValue": "Unsure"
+    },
+    {
+      "MemberName": "PersonaId",
+      "Operator": "NotEqual",
+      "TargetValue": "PS300"
+    },
+    {
+      "MemberName": "QN120",
+      "Operator": "Contains",
+      "TargetValue": "302"
+    }
+  ],
+  "MatchAnyRule": "false"
+}

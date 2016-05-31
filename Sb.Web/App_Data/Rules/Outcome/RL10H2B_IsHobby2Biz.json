@@ -1,0 +1,18 @@
+﻿{
+  "Id": "RL10H2B",
+  "ObligationId": "OB10H2B",
+  "IsEnabled": "true",
+  "Rules": [
+    {
+      "MemberName": "OutcomeType",
+      "Operator": "Equal",
+      "TargetValue": "Hobby"
+    },
+    {
+      "MemberName": "QN120",
+      "Operator": "Contains",
+      "TargetValue": "302"
+    }
+  ],
+  "MatchAnyRule": "false"
+}

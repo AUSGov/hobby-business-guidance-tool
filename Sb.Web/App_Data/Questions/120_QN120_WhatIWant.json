@@ -1,0 +1,27 @@
+﻿{
+  "Id": "QN120",
+  "Title": "I intend for my creative work to be:",
+  "ShortTitle": "Intent?",
+  "IsEnabled": "true",
+  "QuestionType": "SingleSelect",
+  "AnswerList": [
+    {
+      "Id": "301",
+      "Title": "a hobby",
+      "Description": "",
+      "IndicationType": "Neither"
+    },
+    {
+      "Id": "302",
+      "Title": "a business",
+      "Description": "<p>You might like the <a href='https://www.business.gov.au/info/plan-and-start/start-your-business'>Starting a business topic</a></p>",
+      "IndicationType": "Neither"
+    },
+    {
+      "Id": "303",
+      "Title": "I'm not sure",
+      "Description": "",
+      "IndicationType": "Neither"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+﻿@model ResultModel
+
+@{
+    var cssClass = Model.OutcomeType == OutcomeType.Unsure ? "active" : string.Empty;
+}
+
+<h2>Your answers:</h2>
+
+<ul class="accordion" data-accordion role="tablist">
+    <li class="accordion-navigation">
+        <a href="#your-answers" id="your-answers-heading" class="accordion-link" role="tab" aria-controls="your-answers">
+            <h3>View or change your answers</h3>
+        </a>
+        <div id="your-answers" class="content @cssClass" role="tabpanel" aria-labelledby="your-answers-heading">
+            <ol class="hb_answersList no-bullet">
+                @foreach (var question in Model.Answers)
+                {
+                    <li class="clearfix">
+                        <div class="small-12 medium-11 large-11 columns hb_answer_group">
+                            <h3>@question.Key.Title</h3>
+                            @foreach (var answer in question.Value)
+                            {
+                                <p class="clearfix">
+                                    <span class="small-12 medium-8 large-9 columns answer">
+                                        @answer.Title
+                                    </span>
+                                    <span class="small-12 medium-3 large-2 columns hb_indication">
+                                        @if (@answer.IndicationType == IndicationType.Neither)
+                                        {
+                                                <!-- Neither -->
+                                        }
+                                        else
+                                        {
+                                            <span class="small">indication of</span>
+                                            <strong>@answer.IndicationType.ToString().ToLower()</strong>
+                                        }
+                                    </span>
+                                </p>
+                            }
+                        </div>
+                        <div class="small-12 medium-1 large-1 columns hb_action">
+                            @Html.ActionLink("Edit", MVC.Questions.ActionNames.Index, MVC.Questions.Name, new { id = question.Key.Id }, new { @class = "btn" })
+                        </div>
+                    </li>
+                }
+            </ol>
+        </div>
+    </li>
+</ul>

@@ -1,0 +1,15 @@
+﻿@model string
+
+@if (!string.IsNullOrEmpty(Model))
+{
+    <div class="site-takeover" style="display: block;">
+        <div data-alert="" class="alert-box environment-takeover" tabindex="0" aria-live="assertive" role="alertdialog">
+            <div class="row">
+                <div class="column">
+                    @Html.Raw(Model)
+                    <button tabindex="0" class="close" aria-label="Close Alert">×</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}

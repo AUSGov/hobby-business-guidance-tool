@@ -1,0 +1,23 @@
+﻿{
+  "Id": "RL10U",
+  "ObligationId": "OB10U",
+  "IsEnabled": "true",
+  "Rules": [
+    {
+      "MemberName": "OutcomeType",
+      "Operator": "Equal",
+      "TargetValue": "Unsure"
+    },
+    {
+      "MemberName": "PersonaId",
+      "Operator": "NotEqual",
+      "TargetValue": "PS300"
+    },
+    {
+      "MemberName": "QN120",
+      "Operator": "NotContains",
+      "TargetValue": "302"
+    }
+  ],
+  "MatchAnyRule": "false"
+}

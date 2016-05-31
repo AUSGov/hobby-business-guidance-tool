@@ -1,0 +1,1049 @@
+// ----- Modules are reusable components or classes that are called from multiple places in the application.
+// ------------------------------------------------------------------------------------------------------
+
+
+// Registration progress bar
+// ------------------------------------------------------------------------------------------------------
+
+.progress-bar {
+    height: 20px;  /* Can be anything */
+    position: relative;
+    display: block;
+    clear: both;
+    margin: 2em 0 2em 0; /* Just for demo spacing */
+    background: #ccc;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    padding: 6px;
+
+	> span {
+		display: block;
+		height: 100%;
+		-webkit-border-top-right-radius: 3px;
+		-webkit-border-bottom-right-radius: 3px;
+		-moz-border-radius-topright: 3px;
+		-moz-border-radius-bottomright: 3px;
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
+		-webkit-border-top-left-radius: 10px;
+		-webkit-border-bottom-left-radius: 10x;
+		-moz-border-radius-topleft: 10px;
+		-moz-border-radius-bottomleft: 10px;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+		background-color: rgb(60,134,196);
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0, rgb(60,134,196)),
+			color-stop(1, rgb(49,121,181))
+		);
+		background-image: -moz-linear-gradient(
+			center bottom,
+			rgb(60,134,196) 37%,
+			rgb(49,121,181) 69%
+		);
+		position: relative;
+		overflow: hidden;
+	}
+}
+
+// Help me decide progress bar
+// ------------------------------------------------------------------------------------------------------
+
+.meter-description {
+  font-size: $smaller;
+  margin: 0 0 0.25em 0;
+  strong {
+    margin-right: 0.35em;
+  }
+}
+
+.meter {
+    height: 30px;  /* Can be anything */
+    position: relative;
+    display: block;
+    clear: both;
+    margin: 0 0 2em 0; /* Just for demo spacing */
+    background: #ccc;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    padding: 6px;
+
+	> span {
+		display: block;
+		height: 100%;
+		-webkit-border-top-right-radius: 3px;
+		-webkit-border-bottom-right-radius: 3px;
+		-moz-border-radius-topright: 3px;
+		-moz-border-radius-bottomright: 3px;
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
+		-webkit-border-top-left-radius: 6px;
+		-webkit-border-bottom-left-radius: 6px;
+		-moz-border-radius-topleft: 6px;
+		-moz-border-radius-bottomleft: 6px;
+		border-top-left-radius: 6px;
+		border-bottom-left-radius: 6px;
+		background-color: rgb(60,134,196);
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0, rgb(60,134,196)),
+			color-stop(1, rgb(49,121,181))
+		);
+		background-image: -moz-linear-gradient(
+			center bottom,
+			rgb(60,134,196) 37%,
+			rgb(49,121,181) 69%
+		);
+		position: relative;
+		overflow: hidden;
+	}
+}
+
+
+
+/* use push right when content beside radio or checkbox needs to wrap */
+.push-right {
+  margin: 0 0 0 30px; 
+  padding: 0; 
+  display: inline-block; 
+  line-height: 1.4em; 
+  vertical-align: top;
+}
+/* same as push-right, but without additional margin */
+.push-right-min {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  line-height: 1.4em;
+  vertical-align: top;
+}
+.microcopy {
+  color: $gray-dark;
+  line-height: 1;
+}
+.field-note {
+  color: $lightest-gray; 
+  font-size: 90%; 
+  font-style: italic;
+  line-height: 1em;
+}
+legend .field-note {
+  font-size: 80%; 
+  display: block;
+  font-style: normal; 
+  line-height: normal;
+  font-family: $font-light;
+  margin: 1em 0 0 0;
+}
+
+/* Yellow animated fade */
+
+@-webkit-keyframes fade { from {background-color: $yellow-fade;} to {background-color: $gray-bg;} }
+@-moz-keyframes fade { from {background-color: $yellow-fade;} to {background-color: $gray-bg;} }
+@keyframes fade { from {background-color: $yellow-fade;} to {background-color: $gray-bg;} }
+
+@-webkit-keyframes fade-inherit { from {background-color: $yellow-fade;} to {background-color: inherit;} }
+@-moz-keyframes fade-inherit { from {background-color: $yellow-fade;} to {background-color: inherit;} }
+@keyframes fade-inherit { from {background-color: $yellow-fade;} to {background-color: inherit;} }
+
+.fade-in {
+    background-color: $gray-bg;
+    -webkit-animation-name: fade;
+    -moz-animation-name: fade;
+    animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+}
+.fade-in-inherit {
+    background-color: transparent;
+    -webkit-animation-name: fade-inherit;
+    -moz-animation-name: fade-inherit;
+    animation-name: fade-inherit;  
+}
+
+
+// Helper classes
+// ------------------------------------------------------------------------------------------------------
+
+.smaller {
+  font-size: $smaller;
+}
+.smallest {
+  font-size: $smallest;
+}
+.visuallyhidden,
+img.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+	&.focusable {	
+		&:focus, &:active {
+			clip: auto;
+			height: auto;
+			margin: 0;
+			overflow: visible;
+			position: static;
+			width: auto;
+		}
+	}
+}
+.nowrap {
+  white-space: nowrap;
+}
+// foundation fix for screenreader css rule
+.show-for-sr, .sr-only {
+    left: -9999em;
+}
+
+
+// System messaging
+// ------------------------------------------------------------------------------------------------------
+
+.system-message {
+	background-color: $system-message;
+	padding: 1em 1em 0.5em 1em;
+	-webkit-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+	border-bottom: 2px solid $blue-pale;
+	margin-top: 55px;
+
+	h1 {
+		color: white;
+		padding: 0;
+		margin: 0 0 1em 0;
+		font-size: 150%;
+	}
+
+	p, li {
+		color: white;  
+	}
+	
+	.icon {
+		display: none;
+	}
+
+	a, a:link, a:visited {
+		color: white;
+		text-decoration: underline;
+	}
+
+	a:hover, a:focus, a:active {
+		text-decoration: none;
+	}
+	
+	img {
+		max-width: 50px;
+		vertical-align: middle;
+	}
+}
+
+button.closeSystemMessage {
+	background: white url(../img/sprite-close.png) no-repeat 7px 8px;
+	color: $brand-blue;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	border: none;
+	text-decoration: none;
+	display: inline-block;
+	padding: 14px 12px 16px 54px;
+
+	&:hover, &:focus, &:active {
+		background: $brand-hover-bg url(../img/sprite-close.png) no-repeat 7px -105px;
+		color: $brand-hover-fg;
+	}
+}
+
+@media only screen and (min-width: $break-medium) {
+	.system-message {
+		background: $system-message url(../img/ico-chat.png) no-repeat 1.5em 0.8em;
+		
+		h1 {
+			margin: 0 0 1em 1.75em;
+		}
+	}
+
+	.system-message-content {
+		float: left;
+		width: 75%;
+	}
+	
+	button.closeSystemMessage {
+		float: right;
+		margin: 0 0 0 2em;
+		text-align: right;
+	}
+}
+
+// Print
+// ------------------------------------------------------------------------------------------------------
+
+// Responsive video
+
+/*.video-container,
+.iframe-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  margin: 1em 0 1em 0;
+}
+.iframe-container {
+  padding-bottom: 35em;
+}
+.video-container iframe, 
+.video-container object, 
+.video-container embed, 
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}*/
+
+// Slide out help panel
+// ------------------------------------------------------------------------------------------------------
+
+/* http://codyhouse.co/gem/css-slide-in-panel/ */
+
+/*.cd-panel {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+    visibility: hidden;
+    -webkit-transition: visibility 0s 0.6s;
+    -moz-transition: visibility 0s 0.6s;
+    transition: visibility 0s 0.6s;
+
+	&::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        cursor: pointer;
+        -webkit-transition: background 0.3s 0.3s;
+        -moz-transition: background 0.3s 0.3s;
+        transition: background 0.3s 0.3s;
+    }
+
+    &.is-visible {
+        visibility: visible;
+        -webkit-transition: visibility 0s 0s;
+        -moz-transition: visibility 0s 0s;
+        transition: visibility 0s 0s;
+
+		&::after {
+			background: rgba(0, 0, 0, 0.6);
+			-webkit-transition: background 0.3s 0s;
+			-moz-transition: background 0.3s 0s;
+			transition: background 0.3s 0s;
+		}
+
+		.cd-panel-close {
+
+			&::before {
+				-webkit-animation: cd-close-1 0.6s 0.3s;
+				-moz-animation: cd-close-1 0.6s 0.3s;
+			}
+
+			&::after {
+				-webkit-animation: cd-close-2 0.6s 0.3s;
+				-moz-animation: cd-close-2 0.6s 0.3s;
+			}
+		}
+	}
+}
+
+.cd-panel-header {
+    background-color: black;
+    position: fixed;
+    height: 60px;
+    line-height: 60px;
+    z-index: 2;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+    -webkit-transition: top 0.3s 0s;
+    -moz-transition: top 0.3s 0s;
+    transition: top 0.3s 0s;
+    width: 100%;
+
+	.from-right &, .from-left & {
+		top: -50px;
+	}
+
+	.from-right & {
+		right: 0;
+	}
+
+	.from-left & {
+		left: 0;
+	}
+
+	@media only screen and (min-width: 768px) {
+        width: 70%;
+    }
+
+	@media only screen and (min-width: 1170px) {
+		width: 50%;
+	}
+
+	.is-visible & {
+		top: 0;
+		-webkit-transition: top 0.3s 0.3s;
+		-moz-transition: top 0.3s 0.3s;
+		transition: top 0.3s 0.3s;
+	}
+
+	a, a:link, a:visited {
+		background: black url(/assets/app/img/sprite-close.png) no-repeat 100% 10px;
+		color: white;
+		padding-right: 60px;
+		text-decoration: none;
+		text-align: right;
+	}
+
+	a:hover, a:active, a:focus {
+        background: black url(/assets/app/img/sprite-close.png) no-repeat 100% -102px;
+    }
+	
+	h2 {
+		background: #367ab3 url(/assets/app/img/ico-help-form.png) no-repeat 0 0;
+		padding-left: 30px;
+		color: white;
+		font-size: 140%;
+		margin-top: 60px;
+		padding: 0.4em 0.25em 0.5em 1.5em;
+	}
+}
+
+.cd-panel-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    overflow: hidden;
+ 
+	&::before, &::after {
+		position: absolute;
+		top: 22px;
+		left: 20px;
+		height: 3px;
+		width: 20px;
+		background-color: #424f5c;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+	}
+
+	&::before {
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+	&::after {
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+	.no-touch & {
+		&:hover {
+			background-color: #424f5c;
+		}
+
+		&:hover::before, &:hover::after {
+			background-color: #ffffff;
+			-webkit-transition-property: -webkit-transform;
+			-moz-transition-property: -moz-transform;
+			transition-property: transform;
+			-webkit-transition-duration: 0.3s;
+			-moz-transition-duration: 0.3s;
+			transition-duration: 0.3s;
+		}
+
+		&:hover::before {
+			-webkit-transform: rotate(220deg);
+			-moz-transform: rotate(220deg);
+			-ms-transform: rotate(220deg);
+			-o-transform: rotate(220deg);
+			transform: rotate(220deg);
+		}
+
+		&:hover::after {
+			-webkit-transform: rotate(135deg);
+			-moz-transform: rotate(135deg);
+			-ms-transform: rotate(135deg);
+			-o-transform: rotate(135deg);
+			transform: rotate(135deg);
+		}
+	}
+}
+
+.cd-panel-print {
+
+	a, a:link, a:visited {
+		background: transparent url(/assets/app/img/sprite-print.png) no-repeat 100% 12px;
+		color: white;
+		padding-right: 60px;
+		text-decoration: none;
+		text-align: right;
+		position: absolute;
+		right: 0;
+		top: 55px;
+	}
+
+    a:hover, a:active, a:focus {
+        background: transparent url(/assets/app/img/sprite-print.png) no-repeat 100% -100px;
+    }
+}
+
+.cd-panel-container {
+    position: fixed;
+    width: 90%;
+    height: 100%;
+    top: 0;
+    background: white;
+    z-index: 1;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+
+	.from-right & {
+		right: 0;
+		-webkit-transform: translate3d(100%, 0, 0);
+		-moz-transform: translate3d(100%, 0, 0);
+		-ms-transform: translate3d(100%, 0, 0);
+		-o-transform: translate3d(100%, 0, 0);
+		transform: translate3d(100%, 0, 0);
+	}
+
+	.from-left & {
+		left: 0;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		-moz-transform: translate3d(-100%, 0, 0);
+		-ms-transform: translate3d(-100%, 0, 0);
+		-o-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+	}
+
+	.is-visible & {
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+		-webkit-transition-delay: 0s;
+		-moz-transition-delay: 0s;
+		transition-delay: 0s;
+	}
+
+	@media only screen and (min-width: 768px) {
+        width: 70%;
+	}
+
+	@media only screen and (min-width: 1170px) {
+        width: 50%;
+    }
+}
+
+.cd-panel-content {
+    position: absolute;
+    top: 130px;
+    left: 0;
+    width: 88%;
+    height: 82%;
+    padding: 0 5%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+        h1{
+            font-size: 1.6rem;
+            margin-top:2rem;
+
+        }
+}*/
+
+.showhide {
+	margin-bottom: 1.5em;
+
+	h3 {
+		font-size: 120%;
+		margin: 0;
+		line-height: 1.4em;
+
+		a, a:link, a:visited {
+			background: transparent url("/assets/app/img/img/sprite-expand-collapse.png") 8px 17px no-repeat;
+			color: #367ab3;
+			display: block;
+			padding: 0.75em 0 0.75em 2.5em;
+			margin: 0;
+			text-decoration: none;
+		}
+
+		a:hover, a:focus, a:active {
+			background: black url("/assets/app/img/img/sprite-expand-collapse.png") 8px -112px no-repeat;
+			color: white;
+		}
+		
+		&.open {
+		
+			a, a:link, a:visited {
+				background: #0B5394 url("/assets/app/img/img/sprite-expand-collapse.png") 8px -240px no-repeat;
+				color: white;
+			}
+
+			a:hover, a:focus, a:active {
+				background: black url("/assets/app/img/img/sprite-expand-collapse.png") 8px -370px no-repeat;
+				color: white;
+			}
+		}
+
+		+ div {
+			padding: 0em 0em 0.5em 0em;
+			margin-bottom: 1em;
+			border-bottom: 8px solid #367ab3;
+
+			@media only screen and (min-width: 768px) {
+				padding: 0em 2em 0.5em 2.75em;
+			}
+			display: none;
+		}
+	}
+}
+
+/* help button in table and registration tip block */
+td.help a.cd-btn:hover,
+.registration-tip ul li a.cd-btn:hover,
+td.help a.cd-btn:focus,
+.registration-tip ul li a.cd-btn:focus {
+	background-color: transparent;	
+}
+
+// Validation
+// ------------------------------------------------------------------------------------------------------
+
+/* Allow space for help icon when it is required beside legend */
+
+.has-help {
+  margin-right: 36px;
+}
+a.cd-btn {
+  max-width: 34px;
+  right: 0;
+  z-index: 10;
+  position:absolute;
+  top: 4px;
+   main &:hover, main &:focus{
+      background: none;
+  }
+}
+
+@media only screen and (min-width: $break-medium) {
+    a.cd-btn {
+      top: 22px;
+     }
+}
+
+/* allow for inline icon for registration tips */
+/*.registration-tip {
+
+	ul li a.cd-btn {
+		margin-left: .2em;
+	}
+
+	ul li img.help-icon,
+	img.help-icon.inline {
+		position:relative;
+		right: auto;
+		vertical-align: middle;
+	}
+
+	img.inline {
+		margin-left: .2em;
+		cursor: pointer;
+	}
+}
+
+@media only screen and (min-width: $break-medium) {
+  img.help-icon {
+    position: absolute;
+    float: none;
+    right: 0;
+  }
+}*/
+
+.validation-container {
+	background-color: $gray-bg;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	padding: 1.25em 1em 0.75em 1em;
+	margin: 0.5em 0;
+    display:table;
+}
+
+.validation-summary-icon {
+	float: left;
+	display: inline;
+
+	img {
+		width: 24px;
+		margin: 0 6px 0 0;
+		vertical-align: middle;
+
+		@media only screen and (min-width: $break-medium) {
+			width: 30px;
+			margin: 0 10px 0 0;
+		}
+
+		@media only screen and (min-width: $break-large) {
+			width: 36px;
+			margin: 0 12px 0 0;
+		}
+	}
+}
+
+.validation-icon {
+  max-width: 28px;
+}
+
+.validation-inline {
+  color: $validation-red;
+
+	img {
+		display: inline-block;
+		width: 28px;
+		height: 28px;
+		float: left;
+		margin: 0 5px 0 0;
+		vertical-align: middle;
+	}
+}
+/*@media only screen and (min-width: $break-medium) {
+    legend span.validation-inline img {
+		position: absolute;
+		left: 0;
+	}
+}*/
+
+.validation-message {
+	float: left;
+	width: 90%;
+	margin: 0;
+
+	p, li {
+		color: black;
+
+		a, a:link {
+			color: $validation-red !important;
+		}
+		
+		a:hover, a:active, a:focus {
+			color: white !important;
+		}
+	}
+
+	h2 {
+		margin: 0;
+		padding: 0;
+
+		// Hide pseudo effects for validation heading 
+		a, a:link, a:visited, a:hover, a:focus, a:active {
+			text-decoration: none;
+			color: $font-color;
+			background-color: transparent;
+		}
+		
+		.sub-section-content & {
+			background: none !important;
+		}
+	}
+}
+@media only screen and (max-width: $break-small) {
+  .validation-message {
+	float: left;
+	width: 80%;
+	margin: 0;}
+}
+
+.highlight {
+  	background: #e8f0f8 no-repeat 1em 1.2em;
+	border: 1px dashed #cfdeeb;
+	padding: 2rem;
+    margin: 1.5rem 0;
+    h3, h2{
+        margin-top:0;
+    }
+}
+
+// Collapsable sections within each main registration step
+// ------------------------------------------------------------------------------------------------------
+
+.accordion {
+    margin: 1.5rem 0;
+    .accordion-navigation {
+        margin: 0rem 0 1.5em 0 !important;
+        padding: 0;
+        background: none;
+        a.accordion-link {
+            padding: 0;
+            background: 0;
+            text-decoration: none;
+            h3 {
+                -webkit-border-radius: 6px;
+                border-radius: 6px;
+                margin: 0;
+                background: $gray-bg url(/assets/app/img/sprite-sections.png) no-repeat 0 -7px;
+                padding: 0.4em 0.5em 0.4em 60px;
+                font-size: 1.5rem;
+                border-radius: 6px;
+                display: block;
+            }
+        }
+        &.active a.accordion-link h3 {
+            background: $gray-bg url(/assets/app/img/sprite-sections.png) no-repeat 0 -105px;
+        }
+        .content {
+            display: block;
+            max-height: 0;
+            padding: 0;
+            opacity: 0;
+            visibility: hidden;
+            overflow: hidden;
+            transition: max-height 300ms ease-out, opacity 500ms ease-out;
+            p, ul {
+                margin-top: .0rem;
+                margin-bottom: 1rem;
+                &:last-child{
+                    margin-bottom:0;
+                }               
+            }
+            // reset List styling due to defect with parent LI structure of accordions
+             ul{
+                margin-left: 1.5rem;
+                list-style-type: disc;
+                li {
+                    ul{ 
+                        margin-top: .5rem;      
+                        list-style-type: circle;
+                    }
+                 }
+    
+            }
+            .btn-default, .btn {
+                white-space: normal;
+                line-height: .5rem 1.5rem;
+            }
+
+            &.active {
+                display: block;
+                max-height: 5000px;
+                visibility: visible;
+                padding: 1.5rem .5rem 0;
+                opacity: 1;
+                transition: max-height 300ms ease-in, opacity 500ms ease-in;
+            }
+
+            a.btn-default:visited {
+                color: #fff;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $break-small) {
+    .accordion .accordion-navigation .content p {
+        margin: .0rem 0rem 1rem;
+    }
+
+    .accordion .accordion-navigation .content p:first-child {
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (max-width: $break-medium) {
+    .accordion .accordion-navigation a.accordion-link h3 {
+        font-size: 1.3rem;
+        padding-bottom: .8rem;
+    }
+
+}
+@media only screen and (min-width: $break-medium) {
+    .accordion .accordion-navigation .content.active{
+            padding: 1.5rem 1.5rem 0;
+    }
+}
+
+/* Next steps answer table */
+.accordion .accordion-navigation .content .hb_answersList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.1;
+    li {
+        //border-bottom: 1px solid #ccc;
+        background-color: $gray-lighter;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        margin-top: 0;
+        font-size: 1.3rem;
+        margin-bottom: 0.75rem;
+    }
+
+    p {
+        margin: 0 0 .5rem 0;
+        padding-bottom: .5rem;
+        border-bottom: 1px solid $gray-light;
+        position: relative;
+        span{
+             padding: 0;
+         } 
+        span.answer {
+            position: relative;
+            top: 3px;
+
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .hb_answer_group{ 
+        width: 100%;
+        padding: 0;
+      
+    }
+    .hb_action{
+        margin-top: 2rem;
+        padding: 0;
+        width: 100%;
+         .btn{
+                width: 100%;
+                margin-right: 0;          
+            }      
+    }
+}
+
+.hb_answer {
+    float: left;
+    width: 75%;
+}
+
+.hb_indication {
+    line-height: 1;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+/* bigger than mobile */
+@media screen and (min-width: $break-small) {
+    .accordion .accordion-navigation .content .hb_answersList {
+        .hb_answer_group {
+            width: 77.66667%;
+        }
+        .hb_action {
+             padding-left: 1rem;
+             margin-top: 0 !important;
+             width: 22.33333%;
+        }
+          .hb_indication {
+              width: 100%;
+
+          }
+        
+    }  
+}
+/* bigger than tablet */
+@media screen and (min-width: $break-medium) {
+    .accordion .accordion-navigation .content .hb_answersList {
+        li {
+            padding: 2rem;
+        }        
+        h3 {
+             margin-right: 100px;
+        }
+         p {
+            margin: 0 0 .5rem 0;      
+        }
+    }
+
+    .hb_indication {
+        text-align: right;
+        font-weight: normal;
+        margin-top: 0;
+        position: absolute;
+        bottom: 5px;
+        margin-bottom: 0;
+        right: 0;
+        width: 25%;
+        .small {
+            font-size: 0.85em;
+        }
+
+        strong {
+            display: block;
+        }
+    }
+
+    .hb_answer_group {
+        //border-right: solid 1px $gray-light;
+    }
+     .accordion .accordion-navigation .content .hb_answersList {
+        .hb_answer_group {
+            padding-right: 1rem;
+            width: 85.66667%;
+        }
+
+        .hb_action {
+            padding-left: 1rem;
+            margin-top: 0 !important;
+             width: 14.33333%;
+           }
+    }
+}
+
+@media screen and (min-width: $break-large) {
+    .accordion .accordion-navigation .content .hb_answersList {
+       .hb_answer_group {
+            width: 89.66667%;
+        }
+
+        .hb_action {
+             width: 10.33333%;
+           }
+    }
+}

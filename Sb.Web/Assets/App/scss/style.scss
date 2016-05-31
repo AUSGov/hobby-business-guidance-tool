@@ -1,0 +1,65 @@
+// CSS will be compiled in the following order. The order SASS files are compiled is important for inheritance.
+// ------------------------------------------------------------------------------------------------------
+
+@import "../../Vendor/font-awesome-4.6.1/scss/_variables.scss";
+// ----- Font-awesome character variables.
+
+@import "variables";
+// ----- Variables is where reusable attributes are declared, such as colours and font cascades.
+// Widths
+// Colours
+// Padding and radius
+// Typography
+// Mixins
+
+@import "typography";
+// ----- Typography handles basic type properties such as colours and sizing
+// Hyperlinks
+// Font styling
+// Headings
+// Tables
+// Confirmation layout
+// Responsive font sizing
+
+@import "layout";
+// ----- Layout can use predefined modules to build page layout. It is also for declaring structural elements and custom classes.
+// Layout containers
+// Layout for feature home page
+// Header
+// Group of buttons for navigating registration steps
+// Filter container for application search
+// Footer
+// Iconography
+// Feature treatment for pricing on business names page
+// Business name results
+// Sideboxes on start page
+
+//@import "grid";
+// ----- 	12 column grid framework
+// Main container for all
+// Small devices
+
+@import "forms";
+// ----- Default styling for buttons, fields, inputs and custom checkboxes and radiobuttons
+// Buttons 
+// form elements
+// Restyled radio buttons
+
+@import "modules";
+// ----- Modules are reusable components or classes that are called from multiple places in the application.
+// Registration progress bar
+// Help me decide progress bar
+// Styling content within forms
+// System messaging
+// Print
+// Modal confirmation message
+// Helper classes
+// Slide out help panel
+// Validation
+
+@import "print";
+// ----- Print styling
+
+//@import "developers";
+// ----- Developers use for additions or overrides. UI team then refactor this into appropriate SASS file
+

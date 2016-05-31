@@ -1,0 +1,31 @@
+﻿{
+  "Id": "QN140",
+  "Title": "My creative work is advertised or promoted:",
+  "ShortTitle": "Promotion?",
+  "IsEnabled": "true",
+  "QuestionType": "MultiSelect",
+  "AnswerList": [
+    {
+      "Id": "601",
+      "Title": "not at all",
+      "Description": "",
+      "IndicationType": "Hobby",
+      "CssClass": "NoneOption"
+    },
+    {
+      "Id": "602",
+      "Title": "to share my talent with others",
+      "Description": "",
+      "IndicationType": "Either"
+    },
+    {
+      "Id": "603",
+      "Title": "to establish and sell in the marketplace",
+      "Description": "",
+      "IndicationType": "Business"
+    }
+  ]
+}
+
+
+

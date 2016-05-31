@@ -1,0 +1,14 @@
+﻿{
+    "Id": "4",
+    "Title": "It's hard to tell if your running a business",
+    "ObligationId": "OB102",
+    "IsEnabled": "true",
+    "Rules": [
+        {
+            "MemberName": "OutcomeType",
+            "Operator": "Equal",
+            "TargetValue": "Unsure"
+        }
+    ],
+    "MatchAnyRule": true
+}

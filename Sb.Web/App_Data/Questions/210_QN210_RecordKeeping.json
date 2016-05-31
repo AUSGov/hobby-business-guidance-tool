@@ -1,0 +1,33 @@
+﻿{
+  "Id": "QN210",
+  "Title": "As part of my creative work, I keep records to:",
+  "ShortTitle": "Record keeping?",
+  "IsEnabled": "true",
+  "QuestionType": "SingleSelect",
+  "AnswerList": [
+    {
+      "Id": "901",
+      "Title": "I don’t keep records",
+      "Description": "",
+      "IndicationType": "Hobby"
+    },
+    {
+      "Id": "902",
+      "Title": "have them on hand if I need them one day",
+      "Description": "",
+      "IndicationType": "Hobby"
+    },
+    {
+      "Id": "903",
+      "Title": "understand how much my activity costs me",
+      "Description": "",
+      "IndicationType": "Hobby"
+    },
+    {
+      "Id": "904",
+      "Title": "manage my finances and keep track of sales and expenses",
+      "Description": "",
+      "IndicationType": "Business"
+    }
+  ]
+}

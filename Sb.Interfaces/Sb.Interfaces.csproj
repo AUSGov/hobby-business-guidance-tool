@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC3EE7D1-1B1D-456E-9BCA-420BEF86859B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sb.Interfaces</RootNamespace>
+    <AssemblyName>Sb.Interfaces</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Sc.AssemblyInfo.cs">
+      <Link>Properties\Sc.AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Enums\IndicationType.cs" />
+    <Compile Include="Enums\QuestionType.cs" />
+    <Compile Include="ISettingsReader.cs" />
+    <Compile Include="Models\IPersona.cs" />
+    <Compile Include="Models\IQuestionAnswerPair.cs" />
+    <Compile Include="Models\IRuleset.cs" />
+    <Compile Include="Enums\OutcomeType.cs" />
+    <Compile Include="Enums\ObligationType.cs" />
+    <Compile Include="Models\ILink.cs" />
+    <Compile Include="Models\IObligation.cs" />
+    <Compile Include="Models\IAnswer.cs" />
+    <Compile Include="Models\IRule.cs" />
+    <Compile Include="Models\IVisitor.cs" />
+    <Compile Include="Models\IQuestion.cs" />
+    <Compile Include="Services\ICacheManager.cs" />
+    <Compile Include="Services\ICookieContext.cs" />
+    <Compile Include="Services\IFilePathResolver.cs" />
+    <Compile Include="Services\IAnswerManager.cs" />
+    <Compile Include="Services\IHttpWrapper.cs" />
+    <Compile Include="Services\IPersonaLoader.cs" />
+    <Compile Include="Services\IPersonaManager.cs" />
+    <Compile Include="Services\IRulesetLoader.cs" />
+    <Compile Include="Services\IObligationManager.cs" />
+    <Compile Include="Services\IObligationLoader.cs" />
+    <Compile Include="Services\IQuestionManager.cs" />
+    <Compile Include="Services\IQuestionLoader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,18 @@
+﻿{
+  "Id": "RL58U",
+  "ObligationId": "OB58U",
+  "IsEnabled": "true",
+  "Rules": [
+    {
+      "MemberName": "QN110",
+      "Operator": "NotContains",
+      "TargetValue": "204"
+    },
+    {
+      "MemberName": "OutcomeType",
+      "Operator": "Equal",
+      "TargetValue": "Unsure"
+    }
+  ],
+  "MatchAnyRule": false
+}

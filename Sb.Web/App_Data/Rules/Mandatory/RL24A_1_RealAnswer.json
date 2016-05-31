@@ -1,0 +1,14 @@
+﻿{
+  "Id": "RL24A_1",
+  "Title": "Trigger real answer for unsure (but not wants to be business)",
+  "ObligationId": "OB24A",
+  "IsEnabled": "true",
+  "Rules": [
+    {
+      "MemberName": "OutcomeType",
+      "Operator": "Equal",
+      "TargetValue": "Unsure"
+    }
+  ],
+  "MatchAnyRule": false
+}

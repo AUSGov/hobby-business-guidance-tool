@@ -1,0 +1,13 @@
+﻿{
+    "Id": "RL21H",
+    "ObligationId": "OB21H",
+    "IsEnabled": "true",
+    "Rules": [
+        {
+            "MemberName": "OutcomeType",
+            "Operator": "Equal",
+            "TargetValue": "Hobby"
+        }
+    ],
+    "MatchAnyRule": true
+}

@@ -1,0 +1,13 @@
+﻿{
+  "Id": "RL60U",
+  "ObligationId": "OB60U",
+  "IsEnabled": "true",
+  "Rules": [
+    {
+      "MemberName": "OutcomeType",
+      "Operator": "Equal",
+      "TargetValue": "Unsure"
+    }
+  ],
+  "MatchAnyRule": false
+}

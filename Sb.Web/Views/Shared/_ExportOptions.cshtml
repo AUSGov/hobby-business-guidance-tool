@@ -1,0 +1,65 @@
+﻿<div class="content-share-buttons row hide-on-print" role="toolbar">
+    <hr />
+    <ul class="links">
+        <li>
+            <a href="@ConfigurationManager.AppSettings[Constants.AppSettings.FeedbackUrl]" title="Feedback" id="feedback">
+                <span class="fa fa-commenting-o"></span>
+                Feedback
+            </a>
+        </li>
+        <li>
+            <a href="https://www.business.gov.au/news" title="News" id="news">
+                <span class="fa fa-newspaper-o"></span>
+                News
+            </a>
+        </li>
+        <li>
+            <a href="https://www.business.gov.au/contact-us/subscribe-to-our-news-updates" title="Subscribe" id="subscribe">
+                <span class="fa fa-envelope-square"></span>
+                Subscribe
+            </a>
+        </li>
+    </ul>
+    <ul class="actions">
+        <li>
+            <button title="Share this article" class="js-share" id="share" type="button">
+                <span class="fa fa-share"></span>
+                Share
+            </button>
+            <ul class="share" aria-expanded="false">
+                <li class="facebook">
+                    <a href="#" id="facebook" onclick="return popup('https://www.facebook.com/sharer/sharer.php?u=https://start.dev.business.gov.au')" target="_blank" tabindex="-1">
+                        <span class="show-for-sr">Facebook Like (opens new window)</span>
+                    </a>
+                </li>
+                <li class="linkedin">
+                    <a href="#" id="linkedin" onclick="return popup('http://www.linkedin.com/shareArticle?url=https://start.dev.business.gov.au/')" target="_blank" tabindex="-1">
+                        <span class="show-for-sr">Linkedin Share (opens new window)</span>
+                    </a>
+                </li>
+                <li class="twitter">
+                    <a href="#" id="twitter" onclick="return popup('https://twitter.com/intent/tweet?&url=https://start.dev.business.gov.au')" target="_blank" tabindex="-1">
+                        <span class="show-for-sr">Twitter Tweet (opens new window)</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:void(0)" title="Print this article" onclick="window.print()" id="print">
+                <span class="fa fa-print"></span>
+                Print
+            </a>
+        </li>
+        <li>
+            @{
+                string mailto = string.Format("mailto:?subject={0}&body={1}",
+                    Uri.EscapeDataString((ViewBag.Title ?? "Help me work it out") + " | business.gov.au"),
+                    Url.Encode(Request.Url.Scheme + "://" + Request.Url.Authority + Request.Url.PathAndQuery));
+            }
+            <a rel="nofollow" href='@mailto' title="Email link to this page" id="email">
+                <span class="fa fa-envelope"></span>
+                Email
+            </a>
+        </li>
+    </ul>
+</div>

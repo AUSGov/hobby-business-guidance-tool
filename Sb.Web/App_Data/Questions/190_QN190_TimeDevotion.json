@@ -1,0 +1,33 @@
+﻿{
+  "Id": "QN190",
+  "Title": "The time I devote to my creative work is:",
+  "ShortTitle": "Time devotion?",
+  "IsEnabled": "true",
+  "QuestionType": "SingleSelect",
+  "AnswerList": [
+    {
+      "Id": "801",
+      "Title": "occasionally - only when I have spare time",
+      "Description": "",
+      "IndicationType": "Hobby"
+    },
+    {
+      "Id": "802",
+      "Title": "when I can find time outside my full-time employment or responsibilities",
+      "Description": "",
+      "IndicationType": "Hobby"
+    },
+    {
+      "Id": "803",
+      "Title": "more than my spare time and I’ve changed my job and family routine so that I can make my creative work",
+      "Description": "",
+      "IndicationType": "Either"
+    },
+    {
+      "Id": "804",
+      "Title": "a lot - I’m spending every possible moment making it successful",
+      "Description": "",
+      "IndicationType": "Business"
+    }
+  ]
+}

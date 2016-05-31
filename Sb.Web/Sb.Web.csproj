@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.2.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.2.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D7D702F7-505E-48CC-A76F-94B264E82591}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sb.Web</RootNamespace>
+    <AssemblyName>Sb.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>true</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.Mvc5.3.3.4\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="T4MVCExtensions, Version=3.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\T4MVCExtensions.3.17.4\lib\net40\T4MVCExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Sc.AssemblyInfo.cs">
+      <Link>Properties\Sc.AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="AdminController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Attributes\AdminAuthorizeAttribute.cs" />
+    <Compile Include="Models\LandingModel.cs" />
+    <Compile Include="RouteInfo.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\QuestionsController.cs" />
+    <Compile Include="Controllers\ResultsController.cs" />
+    <Compile Include="Controllers\SeoController.cs" />
+    <Compile Include="ErrorController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HomeController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PersonaDetailModel.cs" />
+    <Compile Include="Models\ResultModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestionsController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ResultsController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SeoController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SharedController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Obligations\Mandatory\_Description\OB21B.html" />
+    <Content Include="App_Data\Obligations\Mandatory\_Description\OB22A.html" />
+    <Content Include="App_Data\Obligations\Mandatory\_Description\OB20U.html" />
+    <Content Include="App_Data\Obligations\Mandatory\_Description\OB20H.html" />
+    <Content Include="App_Data\Obligations\Mandatory\_Description\OB24A.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB21U.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB51B.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB51U.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB54B.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB56U.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB56H.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB53B.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB52B.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB52U.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB50U.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB50B.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB55A.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB57A.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB58B.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB58U.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB59B.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB59U.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB60B.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB60U.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB90U.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB90H.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB90B.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB21H.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB56B.html" />
+    <Content Include="App_Data\Obligations\Optional\_Description\OB52H.html" />
+    <Content Include="App_Data\Obligations\Outcome\_Description\OB10H2B.html" />
+    <Content Include="App_Data\Obligations\Outcome\_Description\OB10S.html" />
+    <Content Include="App_Data\Obligations\Outcome\_Description\OB10H.html" />
+    <Content Include="App_Data\Obligations\Outcome\_Description\OB10B.html" />
+    <Content Include="App_Data\Obligations\Mandatory\_Description\OB20B.html" />
+    <Content Include="App_Data\Obligations\Outcome\_Description\OB10U2B.html" />
+    <Content Include="App_Data\Obligations\Outcome\_Description\OB10U.html" />
+    <Content Include="App_Data\Obligations\Mandatory\_Description\OB23A.html" />
+    <Content Include="App_Data\Questions\_MoreInfo\QN180.html" />
+    <Content Include="App_Data\Questions\_MoreInfo\QN190.html" />
+    <Content Include="App_Data\Questions\_MoreInfo\QN240.html" />
+    <Content Include="App_Data\Questions\_MoreInfo\QN210.html" />
+    <Content Include="App_Data\Questions\_MoreInfo\QN140.html" />
+    <Content Include="App_Data\Questions\_MoreInfo\QN130.html" />
+    <Content Include="App_Data\Questions\_MoreInfo\QN120.html" />
+    <Content Include="Assets\app.css">
+      <DependentUpon>app.scss</DependentUpon>
+    </Content>
+    <Content Include="Assets\app.min.css">
+      <DependentUpon>app.css</DependentUpon>
+    </Content>
+    <Content Include="Assets\App\img\bg-controls.png" />
+    <Content Include="Assets\App\img\bg-fade-down.png" />
+    <Content Include="Assets\App\img\bg-fade-up.png" />
+    <Content Include="Assets\App\img\bg-home.jpg" />
+    <Content Include="Assets\App\img\bg-sub-brand.png" />
+    <Content Include="Assets\App\img\bga_logo_footer.png" />
+    <Content Include="Assets\App\img\bga_logo_footer_beta.png" />
+    <Content Include="Assets\App\img\brand.png" />
+    <Content Include="Assets\App\img\btn-fb-like.png" />
+    <Content Include="Assets\App\img\btn-linkedin.png" />
+    <Content Include="Assets\App\img\btn-twitter.png" />
+    <Content Include="Assets\App\img\content-bullet.png" />
+    <Content Include="Assets\App\img\favicon114.png" />
+    <Content Include="Assets\App\img\favicon120.png" />
+    <Content Include="Assets\App\img\favicon144.png" />
+    <Content Include="Assets\App\img\favicon152.png" />
+    <Content Include="Assets\App\img\favicon16.png" />
+    <Content Include="Assets\App\img\favicon32.png" />
+    <Content Include="Assets\App\img\favicon57.png" />
+    <Content Include="Assets\App\img\favicon60.png" />
+    <Content Include="Assets\App\img\favicon72.png" />
+    <Content Include="Assets\App\img\favicon76.png" />
+    <Content Include="Assets\App\img\favicon96.png" />
+    <Content Include="Assets\App\img\header-logo--beta.PNG" />
+    <Content Include="Assets\App\img\header-logo.png" />
+    <Content Include="Assets\App\img\header_logo.png" />
+    <Content Include="Assets\App\img\ico-account.png" />
+    <Content Include="Assets\App\img\ico-alert-red.png" />
+    <Content Include="Assets\App\img\ico-alert-small.png" />
+    <Content Include="Assets\App\img\ico-alert28.png" />
+    <Content Include="Assets\App\img\ico-chat.png" />
+    <Content Include="Assets\App\img\ico-close.png" />
+    <Content Include="Assets\App\img\ico-delete.png" />
+    <Content Include="Assets\App\img\ico-dollar.png" />
+    <Content Include="Assets\App\img\ico-edit.png" />
+    <Content Include="Assets\App\img\ico-exclamation-gray.png" />
+    <Content Include="Assets\App\img\ico-exclamation-orange.png" />
+    <Content Include="Assets\App\img\ico-external.png" />
+    <Content Include="Assets\App\img\ico-help-form.png" />
+    <Content Include="Assets\App\img\ico-loading.gif" />
+    <Content Include="Assets\App\img\ico-remove-small.png" />
+    <Content Include="Assets\App\img\ico-system.png" />
+    <Content Include="Assets\App\img\ico-tick-gray.png" />
+    <Content Include="Assets\App\img\ico-tick-green.png" />
+    <Content Include="Assets\App\img\ico-ticks.png" />
+    <Content Include="Assets\App\img\ico-tip-26.png" />
+    <Content Include="Assets\App\img\sprite-add-individual.png" />
+    <Content Include="Assets\App\img\sprite-add-organisation.png" />
+    <Content Include="Assets\App\img\sprite-close.png" />
+    <Content Include="Assets\App\img\sprite-custom-controls.png" />
+    <Content Include="Assets\App\img\sprite-download.png" />
+    <Content Include="Assets\App\img\sprite-edit.png" />
+    <Content Include="Assets\App\img\sprite-exit.png" />
+    <Content Include="Assets\App\img\sprite-expand-collapse.png" />
+    <Content Include="Assets\App\img\sprite-help-small.png" />
+    <Content Include="Assets\App\img\sprite-help.png" />
+    <Content Include="Assets\App\img\sprite-print.png" />
+    <Content Include="Assets\App\img\sprite-registration-status.png" />
+    <Content Include="Assets\App\img\sprite-remove.png" />
+    <Content Include="Assets\App\img\sprite-sections.png" />
+    <Content Include="Assets\App\img\sprite-steps.png" />
+    <Content Include="Assets\App\img\sprite-trash.png" />
+    <Content Include="Assets\App\Js\webchat.js" />
+    <Content Include="Assets\App\Js\startup.js" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\css\font-awesome.css" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\css\font-awesome.min.css" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\Vendor\foundation-5.5.3\foundation.min.css" />
+    <Content Include="Assets\Vendor\foundation-5.5.3\foundation.min.js" />
+    <Content Include="Assets\Vendor\modernizr\modernizr-custom.js" />
+    <Content Include="Assets\Vendor\normalize.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="nonexistent.gif" />
+    <Content Include="robots.allow.txt" />
+    <Content Include="robots.deny.txt" />
+    <Content Include="Scripts\ai.0.22.9-build00167.js" />
+    <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="compilerconfig.json" />
+    <Content Include="App_Data\Questions\135_QN240_WhoSellMyWorkTo.json" />
+    <Content Include="App_Data\Obligations\Mandatory\200_OB20U_IncomeForUnsure.json" />
+    <Content Include="App_Data\Obligations\Mandatory\200_OB20H_IncomeForHobby.json" />
+    <Content Include="App_Data\Rules\Mandatory\RL20H_Income.json" />
+    <Content Include="App_Data\Rules\Mandatory\RL20U_Income.json" />
+    <Content Include="App_Data\Obligations\Mandatory\210_OB21B_RecordsBusiness.json" />
+    <Content Include="App_Data\Rules\Mandatory\RL21B_Records.json" />
+    <Content Include="App_Data\Obligations\Optional\560_OB56H_InsuranceForHobby.json" />
+    <Content Include="App_Data\Obligations\Optional\560_OB56U_InsuranceForUnsure.json" />
+    <Content Include="App_Data\Obligations\Optional\510_OB51B_BusinessStructureForBusiness.json" />
+    <Content Include="App_Data\Obligations\Optional\510_OB51U_BusinessStructureForUnsure.json" />
+    <Content Include="App_Data\Obligations\Optional\520_OB52B_AbnForBusiness.json" />
+    <Content Include="App_Data\Obligations\Optional\520_OB52U_AbnForUnsure.json" />
+    <Content Include="App_Data\Obligations\Optional\530_OB53B_BusinessNameForBusiness.json" />
+    <Content Include="App_Data\Obligations\Optional\570_OB57A_IndustryObligationsForAll.json" />
+    <Content Include="App_Data\Obligations\Optional\580_OB58B_GstForBusiness.json" />
+    <Content Include="App_Data\Obligations\Optional\580_OB58U_GstForUnsure.json" />
+    <Content Include="App_Data\Obligations\Optional\590_OB59U_DomainsForUnsure.json" />
+    <Content Include="App_Data\Obligations\Optional\590_OB59B_DomainsForBusiness.json" />
+    <Content Include="App_Data\Obligations\Optional\600_OB60U_EmploymentForUnsure.json" />
+    <Content Include="App_Data\Obligations\Optional\600_OB60B_EmploymentBusiness.json" />
+    <Content Include="App_Data\Obligations\Optional\900_OB90H_MoreInfoForHobby.json" />
+    <Content Include="App_Data\Obligations\Optional\900_OB90U_MoreInfoForUnsure.json" />
+    <Content Include="App_Data\Rules\Optional\RL51B_BusinessStructure.json" />
+    <Content Include="App_Data\Rules\Optional\RL51U_BusinessStructure.json" />
+    <Content Include="App_Data\Rules\Optional\RL52B_ABN.json" />
+    <Content Include="App_Data\Rules\Optional\RL52U_ABN.json" />
+    <Content Include="App_Data\Rules\Optional\RL53B_BusinessName.json" />
+    <Content Include="App_Data\Rules\Optional\RL54B_PAYG.json" />
+    <Content Include="App_Data\Rules\Optional\RL56B_Insurance.json" />
+    <Content Include="App_Data\Rules\Optional\RL56H_Insurance.json" />
+    <Content Include="App_Data\Rules\Optional\RL56U_Insurance.json" />
+    <Content Include="App_Data\Rules\Optional\RL57A_IndustryObligations.json" />
+    <Content Include="App_Data\Rules\Optional\RL58B_GST.json" />
+    <Content Include="App_Data\Rules\Optional\RL58U_GST.json" />
+    <Content Include="App_Data\Rules\Optional\RL59U_Domains.json" />
+    <Content Include="App_Data\Rules\Optional\RL59B_Domains.json" />
+    <Content Include="App_Data\Rules\Optional\RL60B_Employment.json" />
+    <Content Include="App_Data\Rules\Optional\RL60U_Employment.json" />
+    <Content Include="App_Data\Rules\Optional\RL90H_MoreInfo.json" />
+    <Content Include="App_Data\Rules\Optional\RL90B_1_MoreInfo.json" />
+    <Content Include="App_Data\Obligations\Optional\600_OB21U_RecordsForUnsure.json" />
+    <Content Include="App_Data\Rules\Optional\RL21U_Recordkeeping.json" />
+    <Content Include="App_Data\Personas\070_PS160_BusinessLike.json" />
+    <Content Include="App_Data\Obligations\Mandatory\190_OB24A_GetRealAnswer.json" />
+    <Content Include="App_Data\Rules\Mandatory\RL24A_2_RealAnswer.json" />
+    <Content Include="App_Data\Rules\Mandatory\RL24A_1_RealAnswer.json" />
+    <Content Include="App_Data\Personas\100_PS300_AlmostHobbySellingToPublic.json" />
+    <Content Include="App_Data\Obligations\Outcome\100_OB10S_NextStepsHobbySellingToPublic.json" />
+    <Content Include="App_Data\Rules\Outcome\RL10S_HobbySellingToPublic.json" />
+    <Content Include="App_Data\Obligations\Outcome\100_OB10U2B_NextStepsForUnsure2Biz.json" />
+    <Content Include="App_Data\Obligations\Outcome\100_OB10H2B_NextStepsForHobby2Biz.json" />
+    <Content Include="App_Data\Rules\Outcome\RL10H2B_IsHobby2Biz.json" />
+    <Content Include="App_Data\Rules\Outcome\RL10U2B_IsUnsureToBiz.json" />
+    <Content Include="App_Data\Rules\Optional\RL90B_2_MoreInfo.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <Content Include="Assets\app.scss" />
+    <Content Include="Assets\App\Css\custom.scss" />
+    <Content Include="App_Data\Questions\120_QN120_WhatIWant.json" />
+    <Content Include="App_Data\Questions\130_QN130_WhenSellMyWorkTo.json" />
+    <Content Include="App_Data\Questions\140_QN140_Advertise.json" />
+    <Content Include="App_Data\Obligations\Outcome\100_OB10H_NextStepsForHobby.json" />
+    <Content Include="App_Data\Obligations\Outcome\100_OB10U_NextStepsForUnsure.json" />
+    <Content Include="App_Data\Questions\210_QN210_RecordKeeping.json" />
+    <Content Include="App_Data\Questions\180_QN180_SellAs.json" />
+    <Content Include="App_Data\Questions\190_QN190_TimeDevotion.json" />
+    <Content Include="App_Data\Obligations\Mandatory\230_OB23A_AblisForAll.json" />
+    <Content Include="App_Data\Obligations\Outcome\100_OB10B_NextStepsForLikeBusiness.json" />
+    <Content Include="App_Data\Rules\Outcome\RL10H_IsHobby.json" />
+    <Content Include="App_Data\Rules\Outcome\RL10B_IsLikeBusiness.json" />
+    <Content Include="App_Data\Rules\Outcome\RL10U_IsUnsure.json" />
+    <Content Include="App_Data\Rules\Mandatory\RL23A_Ablis.json" />
+    <Content Include="Assets\App\Css\results.scss" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\fonts\FontAwesome.otf" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\less\animated.less" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\less\bordered-pulled.less" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\less\core.less" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\less\fixed-width.less" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\less\font-awesome.less" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\less\icons.less" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\less\larger.less" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\less\list.less" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\less\mixins.less" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\less\path.less" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\less\rotated-flipped.less" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\less\screen-reader.less" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\less\stacked.less" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\less\variables.less" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\scss\font-awesome.scss" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\scss\_animated.scss" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\scss\_bordered-pulled.scss" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\scss\_core.scss" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\scss\_fixed-width.scss" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\scss\_icons.scss" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\scss\_larger.scss" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\scss\_list.scss" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\scss\_mixins.scss" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\scss\_path.scss" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\scss\_rotated-flipped.scss" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\scss\_screen-reader.scss" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\scss\_stacked.scss" />
+    <Content Include="Assets\Vendor\font-awesome-4.6.1\scss\_variables.scss" />
+    <Content Include="App_Data\Rules\Mandatory\RL22A_Accc.json" />
+    <Content Include="App_Data\Obligations\Mandatory\220_OB22A_AcccForAll.json" />
+    <Content Include="App_Data\Questions\230_QN110_IveAlreadyGot.json" />
+    <Content Include="Assets\App\Css\questions.scss" />
+    <Content Include="App_Data\Personas\200_PS500_PersonaJill.json" />
+    <Content Include="App_Data\Rules\Mandatory\RL20B_Income.json" />
+    <Content Include="App_Data\Obligations\Mandatory\200_OB20B_IncomeForBusiness.json" />
+    <Content Include="App_Data\Rules\Optional\RL52H_ABN.json" />
+    <Content Include="App_Data\Rules\Optional\RL55A_IP.json" />
+    <Content Include="App_Data\Rules\Optional\RL21H_Recordkeeping.json" />
+    <Content Include="App_Data\Obligations\Optional\540_OB54B_PaygForBusiness.json" />
+    <Content Include="App_Data\Obligations\Optional\600_OB21H_RecordsForHobby.json" />
+    <Content Include="App_Data\Obligations\Optional\560_OB56B_InsuranceForBusiness.json" />
+    <Content Include="App_Data\Obligations\Optional\550_OB55A_IpForAll.json" />
+    <Content Include="App_Data\Obligations\Optional\520_OB52H_AbnForHobby.json" />
+    <Content Include="App_Data\Obligations\Optional\900_OB90B_MoreInfoForBusiness.json" />
+    <Content Include="App_Data\Rules\Optional\RL90U_MoreInfo.json" />
+    <Content Include="Assets\App\scss\style.scss" />
+    <Content Include="Assets\App\scss\_developers.scss" />
+    <Content Include="Assets\App\scss\_forms.scss" />
+    <Content Include="Assets\App\scss\_grid.scss" />
+    <Content Include="Assets\App\scss\_layout.scss" />
+    <Content Include="Assets\App\scss\_modules.scss" />
+    <Content Include="Assets\App\scss\_print.scss" />
+    <Content Include="Assets\App\scss\_typography.scss" />
+    <Content Include="Assets\App\scss\_variables.scss" />
+    <None Include="T4MVC.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>T4MVC.cs</LastGenOutput>
+    </None>
+    <None Include="T4MVC.tt.hooks.t4" />
+    <None Include="T4MVC.tt.settings.xml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Questions\Index.cshtml" />
+    <Content Include="Views\Results\Index.cshtml" />
+    <Content Include="Views\Error\NotFound.cshtml" />
+    <Content Include="Views\Error\BadRequest.cshtml" />
+    <Content Include="Views\Results\_WhatAreYou.cshtml" />
+    <Content Include="Views\Results\_MandatoryObligations.cshtml" />
+    <Content Include="Views\Results\_OptionalObligations.cshtml" />
+    <Content Include="Views\Results\_IfThingsChange.cshtml" />
+    <Content Include="Views\Shared\_ExportOptions.cshtml" />
+    <Content Include="Views\Questions\_SingleSelect.cshtml" />
+    <Content Include="Views\Questions\_MultiSelect.cshtml" />
+    <Content Include="Views\Questions\_QuestionType.cshtml" />
+    <Content Include="Views\Admin\QuestionSummary.cshtml" />
+    <Content Include="Views\Admin\QuestionDetail.cshtml" />
+    <Content Include="Views\Admin\ObligationDetail.cshtml" />
+    <Content Include="Views\Shared\_DisabledCookies.cshtml" />
+    <Content Include="Views\Questions\_ProgressBar.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Results\_Answers.cshtml" />
+    <Content Include="Views\Questions\_Buttons.cshtml" />
+    <Content Include="Views\Admin\AnswerDetail.cshtml" />
+    <Content Include="Views\Admin\PersonaDetail.cshtml" />
+    <Content Include="Views\Shared\_TagManager.cshtml" />
+    <Content Include="Web.Dev.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Prod.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Test.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Shared\_Breadcrumbs.cshtml" />
+    <Content Include="Views\Shared\_Topbar.cshtml" />
+    <Content Include="Views\Questions\_ValidationError.cshtml" />
+    <Content Include="Views\Shared\_SiteTakeover.cshtml" />
+    <Content Include="Views\Shared\_SitecoreFxmBeacon.cshtml" />
+    <Content Include="Views\Shared\_PageTitle.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\Questions\_Description\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sb.Entities\Sb.Entities.csproj">
+      <Project>{a5712329-6f1b-4303-9f7b-637d7667c1c6}</Project>
+      <Name>Sb.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sb.Interfaces\Sb.Interfaces.csproj">
+      <Project>{dc3ee7d1-1b1d-456e-9bca-420bef86859b}</Project>
+      <Name>Sb.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sb.Ioc\Sb.Ioc.csproj">
+      <Project>{c9ff302a-54c8-4ec4-bca2-84fdef438490}</Project>
+      <Name>Sb.Ioc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5685</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2080/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.2.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.2.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <Import Project="..\packages\OctoPack.3.0.60\tools\OctoPack.targets" Condition="Exists('..\packages\OctoPack.3.0.60\tools\OctoPack.targets')" />
+  <Target Name="EnsureOctoPackImported" BeforeTargets="BeforeBuild" Condition="'$(OctoPackImported)' == ''">
+    <Error Condition="!Exists('..\packages\OctoPack.3.0.60\tools\OctoPack.targets') And ('$(RunOctoPack)' != '' And $(RunOctoPack))" Text="You are trying to build with OctoPack, but the NuGet targets file that OctoPack depends on is not available on this computer. This is probably because the OctoPack package has not been committed to source control, or NuGet Package Restore is not enabled. Please enable NuGet Package Restore to download them. For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\OctoPack.3.0.60\tools\OctoPack.targets') And ('$(RunOctoPack)' != '' And $(RunOctoPack))" Text="OctoPack cannot be run because NuGet packages were restored prior to the build running, and the targets file was unavailable when the build started. Please build the project again to include these packages in the build. You may also need to make sure that your build server does not delete packages prior to each build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

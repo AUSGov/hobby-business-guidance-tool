@@ -1,0 +1,10 @@
+﻿[
+    {
+        "outputFile": "Assets/app.css",
+        "inputFile": "Assets/app.scss",
+        "minify": {
+            "enabled": true
+        },
+        "sourceMap": true
+    }
+]

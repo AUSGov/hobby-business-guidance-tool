@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+@{
+    var rootSiteUrl = @Html.RootSiteUrl();
+    const string twitterAccount = "@business_gov_au";
+}
+<html lang="en" class="@ConfigurationManager.AppSettings[Constants.AppSettings.EnvironmentType]">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @Styles.Render("~/styles/vendor")
+    @Styles.Render("~/styles/app")
+    @Scripts.Render("~/scripts/head")
+    @RenderSection("styles", required: false)
+    @Html.Partial(MVC.Shared.Views._PageTitle)
+    <meta property="og:title" content="Business or hobby - help me work it out | business.gov.au" />
+    <meta property="og:description" content="Are you getting money as an artist, creative or maker and unsure about your government obligations?" />
+    <meta property="og:url" content="@rootSiteUrl" />
+    <meta property="og:site" content="@rootSiteUrl" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="https://www.business.gov.au/~/media/Business/businessgovauopengraph.ashx" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@twitterAccount">
+    <meta name="twitter:title" content="Business or hobby - help me work it out | business.gov.au" />
+    <meta name="twitter:domain" content="@rootSiteUrl" />
+    <meta name="twitter:description" content="Are you getting money as an artist, creative or maker and unsure about your government obligations?" />
+    <meta name="twitter:image" content="https://www.business.gov.au/~/media/Business/businessgovauopengraph.ashx" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+    <link rel="icon" type="image/png" href="@Links.Assets.App.img.favicon16_png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="@Links.Assets.App.img.favicon32_png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="@Links.Assets.App.img.favicon96_png" sizes="96x96" />
+    <link rel="apple-touch-icon" sizes="57x57" href="@Links.Assets.App.img.favicon57_png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="@Links.Assets.App.img.favicon114_png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="@Links.Assets.App.img.favicon72_png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="@Links.Assets.App.img.favicon144_png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="@Links.Assets.App.img.favicon60_png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="@Links.Assets.App.img.favicon120_png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="@Links.Assets.App.img.favicon76_png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="@Links.Assets.App.img.favicon152_png"/>
+</head>
+<body>
+    @Html.Partial(MVC.Shared.Views._TagManager, ConfigurationManager.AppSettings[Constants.AppSettings.GoogleTagManagerId])
+    <a class="SkipToContent" href="#maincontent">skip to main content</a>
+    @Html.Partial(MVC.Shared.Views._SiteTakeover, ConfigurationManager.AppSettings[Constants.AppSettings.SiteTakeoverHtml])
+    <div id="wrapper">
+        @Html.Partial(MVC.Shared.Views._Topbar)
+        <header>
+            <div class="row">
+                <div class="small-12 columns">
+                    <a href="http://www.business.gov.au/"><img src="@Links.Assets.App.img.header_logo_png" alt="Business.gov.au logo" id="bga-logo" /></a>
+                </div>
+            </div>
+        </header>
+        @Html.Partial(MVC.Shared.Views._Breadcrumbs)
+        <main id="maincontent" role="main">            
+            @Html.Partial(MVC.Shared.Views._DisabledCookies)
+            @RenderBody()
+        </main>
+        <footer>
+            @Html.Partial(MVC.Shared.Views._Footer)
+            <a href="#" class="chat-now">Chat Now</a>
+        </footer>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://chat1.business.gov.au/responselive/responseLive.js"></script>
+    <script src="https://chat1.business.gov.au/responselive/responseLiveChat.js"></script>
+    <script src="https://chat1.business.gov.au/responselive/responseLiveCustomChat.js"></script>
+    @Scripts.Render("~/scripts/foot")
+    @Html.Partial(MVC.Shared.Views._SitecoreFxmBeacon, ConfigurationManager.AppSettings[Constants.AppSettings.SitecoreFxmBeaconUrl])
+    @RenderSection("scripts", required: false)
+</body>
+</html>

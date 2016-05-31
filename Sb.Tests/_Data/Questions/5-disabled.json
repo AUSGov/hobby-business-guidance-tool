@@ -1,0 +1,20 @@
+﻿{
+  "Id": "5",
+  "Title": "Q5-Title",
+  "Description": "Q5-Description",
+  "MoreInfo": "Q5-MoreInfo",
+  "IsEnabled": "false",
+  "QuestionType": "SingleSelect",
+  "AnswerList": [
+    {
+      "Id": "1",
+      "Title": "No",
+      "Description": ""
+    },
+    {
+      "Id": "2",
+      "Title": "Yes",
+      "Description": ""
+    }
+  ]
+}

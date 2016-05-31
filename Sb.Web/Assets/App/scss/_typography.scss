@@ -1,0 +1,245 @@
+// ----- Typography handles basic type properties such as colours and sizing
+// ------------------------------------------------------------------------------------------------------
+
+
+// Font styling
+// ------------------------------------------------------------------------------------------------------
+
+/*!
+ *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+@font-face {
+    font-family: 'FontAwesome';
+    src: url("/assets/vendor/font-awesome-4.6.1/fonts/fontawesome-webfont.eot?v=4.4.0");
+    src: url("/assets/vendor/font-awesome-4.6.1/fonts/fontawesome-webfont.eot?#iefix&v=4.4.0") format("embedded-opentype"),
+        url("/assets/vendor/font-awesome-4.6.1/fonts/fontawesome-webfont.woff2?v=4.4.0") format("woff2"),
+        url("/assets/vendor/font-awesome-4.6.1/fonts/fontawesome-webfont.woff?v=4.4.0") format("woff"),
+        url("/assets/vendor/font-awesome-4.6.1/fonts/fontawesome-webfont.ttf?v=4.4.0") format("truetype"),
+        url("/assets/vendor/font-awesome-4.6.1/fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Hyperlinks
+// ------------------------------------------------------------------------------------------------------
+a {
+  color: $link-fg;
+  text-decoration: underline;
+}
+a:visited {
+  color: $link-fg;
+}
+a:hover,
+a:focus,
+a:active {
+  color: white;
+  text-decoration: none;
+    main &{
+        background-color: $link-fg;
+     
+    }
+}
+// external link styling
+a:not([href*="business.gov.au"])[href*="//"]:after {
+    padding-left: .25em;
+    display: inline-block;
+    font-family: FontAwesome;
+    content: "\f08e";  
+}
+/*
+    Add "non-external" class to an anchor tag where the icon is not required visually. 
+*/
+a.non-external:after {
+  content: none !important;
+}
+
+// pdf link styling - add class to apply to each link as needed
+a[href$=".pdf"]{
+     &:before{
+        padding-right:.25em;
+        display: inline-block;
+        font-family: FontAwesome;
+        content: "\f1c1";   
+    }
+    // turn off external link icon - this maybe be able to be removed in refactoring
+    &:not([href*="business.gov.au"])[href*="//"]:after{
+        padding-right:0;
+        content: "";   
+    }
+}
+
+// abbreviation styling
+abbr {
+  border-bottom: 1px dotted #999;
+}
+
+// Headings
+// ------------------------------------------------------------------------------------------------------
+h1, h2, h3, h4 {
+  line-height: 1.3em;
+  margin: 1em 0 0.5em 0;
+  clear: both; 
+  padding: 0;
+  font-family: $font-light;
+  }
+h1, fieldset legend {
+    font-family: $font-light;
+    margin: 1rem 0 0.5rem 0;
+    display: block;
+    line-height: 1.2em;
+    letter-spacing: -.031em;
+    font-size: 1.8rem;
+    font-weight: 300;
+    position: relative;
+}
+h2 {
+  font-family: $font-heading;
+  text-transform: none;
+  font-weight: normal;
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin-top: 2rem;
+}
+h3 {
+  font-family: $font-heading;
+  font-size: 120%;
+  margin: 1em 0 0.5em 0;
+}
+h4{
+  font-family: $font-heading;
+  font-size: 105%;
+  margin: 1em 0 0.5em 0;
+}
+p {
+  font-family: $font-light;
+  font-size: 1.2rem;
+  margin-top: .75rem;
+  margin-bottom: .75rem;
+  font-weight: 300;
+ }
+ul{
+    margin-left: 1.5rem;
+    list-style-type: disc;
+    li {
+      padding: 0.15em 0;
+      font-family: $font-light;
+      font-size: 1.2rem;
+      font-weight: 300;
+      line-height:1.6em;    
+        ul{ 
+            margin-top: 1rem;            
+            list-style-type: circle;
+        }
+     }    
+}
+main .columns .no-bullet li {
+    background: none;
+    padding-left: 0;
+}
+
+// Tables
+// ------------------------------------------------------------------------------------------------------
+
+table {
+    border-spacing: 0;
+    border: 1px solid $table-lines;
+    width: 100%;    
+    margin-bottom: 2em;        
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;  
+}
+
+caption {
+  text-align: left;
+  font-size: 130%;
+  margin: 0.5em 0;
+  font-weight: normal;
+}
+caption span {
+  font-size: 70%;
+}
+/*caption span.alert {
+  background: transparent url(../img/ico-alert-small.png) no-repeat 0 0;
+  padding: 1px 0 3px 30px;
+}
+caption span button {
+  margin-bottom: 0.5em;
+  margin-left: 0.25em;
+} */ 
+td, 
+th {
+    padding: 0.75em 0.5em 0.75em 1em;
+    text-align: left;    
+}
+th {
+    background-color: $table-th;
+    border-top: none;
+}
+th.right,
+p.right {
+  text-align: right;
+}
+td {
+  border-bottom: 1px solid $table-lines;
+  background-color: white;
+}
+.no-border-bottom {
+  border-bottom: 0;
+}
+/*th.warning, td.warning {
+  color: $validation-warning;
+}
+td.warning {
+  background-color: $validation-warning-bg;
+}*/
+
+// Responsive font sizing
+// ------------------------------------------------------------------------------------------------------
+
+@media only screen and (min-width: $break-small) {
+  body {
+    font-size: $font-size-small;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: $break-medium) {
+  body {
+    font-size: $font-size-medium;
+  }
+  h1, fieldset legend {
+    margin: 0;
+  }
+  h1 span {
+    display: none;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: $break-large) {
+  body {
+    font-size: $font-size-large;
+  }
+  h1, fieldset legend {
+    font-size: 1.9rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: $break-wide) {
+  body {
+    font-size: $font-size-wide;
+  }
+  h1, fieldset legend {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+

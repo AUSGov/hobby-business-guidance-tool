@@ -1,0 +1,26 @@
+﻿@model List<IObligation>
+
+@if (Model.Any())
+{
+    <h2>You’ll need to:</h2>
+    <ul class="accordion" data-accordion role="tablist">
+        @foreach (var obligation in Model)
+        {
+            <li class="accordion-navigation">
+                <a href="#@obligation.Id" id="@obligation.Id-heading" class="accordion-link obligation-heading" role="tab" aria-controls="@obligation.Id">
+                    <h3>
+                        @obligation.Title 
+                    </h3>
+                </a>
+                <div id="@obligation.Id" class="content obligation-detail" role="tabpanel" aria-labelledby="@obligation.Id-heading">
+                    @Html.Raw(obligation.Description)
+
+                    @if (obligation.Link != null)
+                    {
+                        <p><a href="@obligation.Link.Url" class="btn-default btn-default" target="_blank">@obligation.Link.Text</a></p>
+                    }
+                </div>
+            </li>
+        }
+    </ul>
+}

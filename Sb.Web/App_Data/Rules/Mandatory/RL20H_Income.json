@@ -1,0 +1,14 @@
+﻿{
+  "Id": "RL20H",
+  "Title": "Trigger income for hobbies",
+  "ObligationId": "OB20H",
+  "IsEnabled": "true",
+  "Rules": [
+    {
+      "MemberName": "OutcomeType",
+      "Operator": "Equal",
+      "TargetValue": "Hobby"
+    }
+  ],
+  "MatchAnyRule": true
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Id": "RL20U",
+  "Title": "Trigger Income for unsure",
+  "ObligationId": "OB20U",
+  "IsEnabled": "true",
+  "Rules": [
+    {
+      "MemberName": "OutcomeType",
+      "Operator": "Equal",
+      "TargetValue": "Unsure"
+    }
+  ],
+  "MatchAnyRule": true
+}

@@ -1,0 +1,134 @@
+// ----- Variables is where reusable attributes are declared, such as colours and font cascades.
+// ------------------------------------------------------------------------------------------------------
+
+// Breakpoints
+// ------------------------------------------------------------------------------------------------------
+
+$break-small: 480px;
+$break-medium: 768px;
+$break-large: 960px;
+$break-wide: 1220px;
+
+// Widths
+// ------------------------------------------------------------------------------------------------------
+
+$content-max-width: 71.25rem;
+
+// Heights
+// ------------------------------------------------------------------------------------------------------
+
+$footer-height: 217px;
+
+// Colours
+// ------------------------------------------------------------------------------------------------------
+
+$bga-brand-blue: #254f90;
+$bga-brand-darkblue: #212a4c;
+$bga-brand-orange: #e5b13d;
+$bga-brand-yellow: #ff0;
+$bga-brand-black: #000;
+$bga-brand-white: #fff;
+$link-fg: $bga-brand-black;
+$link-bg: $bga-brand-white;
+$brand-bg: #e2e2e2;
+$brand-h1: #ff5800;
+$brand-fg: #666666;
+$brand-hover-bg: $bga-brand-black;
+$brand-hover-fg: $bga-brand-white;
+$site-takeover-bg:  $bga-brand-yellow;
+$main-content-bg: #f2f2f2;
+$font-color: $bga-brand-black;
+$bg-footer: #e7e8e9;
+$required: #cc3300;
+$results-alert-bg: #ffe8af;
+$input-focus: #fff79b;
+$highlight-bg: #fff79b;
+$yellow-fade: #fff79b;
+
+$color_celeste_approx: #cccccc;
+$color_storm_dust_approx: #666666;
+
+$table-lines: #e7e7e7;
+$table-th: #e7e7e7;
+
+$validation-red: #cc0000;
+$validation-warning: #9e2600;
+$validation-warning-bg: #f6c6b6;
+$pale-red: #ffd9d9;
+$system-message: #175386;
+$webchat-bg: $bga-brand-darkblue;
+$webchat-border: white;
+$webchat-color: white;
+
+$lightest-gray: #6f6f6f;
+$gray-bg: #e4e5e5;
+$bg-disabled: #efebe7;
+$success-bg: #bbfcbb;
+$amber-bg: #fcebbe;
+
+
+$green: #378211;
+$brand-blue: #3179b5;
+$blue-light: #a7c4dc;
+$blue-pale: #cfdeeb;
+$blue-paler: #e8f0f8;
+$blue-pale-border: #c1cbd4;
+$white70: rgba(255,255,255,0.7);
+$black75: rgba(0,0,0,0.75);
+$gray: #666666;
+$gray-light: #cccccc;
+$gray-lighter: #f5f5f5;
+$gray-dark: #444444;
+
+$process-alert: #efe8ce;	
+
+$button-start-color: #367ab3;
+$button-end-color: #2a6ba1;
+$button-color: $bga-brand-white;
+$button-color-secondary: #666;
+$button-bg-hover: $bga-brand-black;
+$button-color-hover: #ffffff;
+$button-disabled: #656565;
+$button-disabled-border: #B0B0B0;
+
+
+// Padding and radius
+// ------------------------------------------------------------------------------------------------------
+
+$progress-bar-radius: 6px;
+$small-border-radius: 3px;
+$medium-border-radius: 6px;
+$large-border-radius: 10px;
+$site-padding: 3%;
+
+
+
+// Typography
+// ------------------------------------------------------------------------------------------------------
+
+$font-size-base: 16px;
+$font-size-default: 1rem;
+$font-size-small: 1.05rem;
+$font-size-medium: 1.1rem;
+$font-size-large: 1.15rem;
+$font-size-wide: 1.2rem;
+$smaller: 90%;
+$smallest: 80%;
+$larger: 110%;
+$largest: 130%;
+$font-light: Open Sans, helvetica, arial, sans-serif;
+$font-heading: Open Sans, helvetica, arial, sans-serif;
+$font-bold: Open Sans, helvetica, arial, sans-serif;
+$line-height: 1.4;
+
+
+// Mixins
+// ------------------------------------------------------------------------------------------------------
+
+@mixin transition {
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}

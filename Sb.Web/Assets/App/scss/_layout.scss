@@ -1,0 +1,807 @@
+// ----- Layout can use predefined modules to build page layout. It is also for declaring structural elements and custom classes.
+// ------------------------------------------------------------------------------------------------------
+
+
+// Layout containers
+// ------------------------------------------------------------------------------------------------------
+
+body {
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+}
+
+// skip to content link - styling and place off canvas
+.SkipToContent {
+    position: absolute;
+    top: -100%;
+    z-index: 4;
+    text-decoration: underline;
+    background: $link-bg;
+    color: $link-fg;
+    padding: 20px;
+    display: inline-block;
+    border: 1px solid #000;
+    &:focus, &:hover {
+        // expose skip to content links on focus
+        top: 10px;
+        left: 10px;
+        color: $link-fg;
+        text-decoration: underline;
+    }
+}
+
+#wrapper {
+    // footer and body absolute positioning fix
+    padding-bottom: $footer-height;
+    position: relative;
+    min-height: 100%;
+}
+// Site takeover alert styling
+//
+.site-takeover{
+    .alert-box{
+        background: $site-takeover-bg;
+        margin-bottom:0;
+        font-size: 1.125rem;
+        font-weight: 300;
+        font-family: $font-light;
+        font-weight: 300;
+        padding: .875rem 1.5rem .875rem .875rem;    
+        color: #4a4a4a;
+        border: none;
+        .row{
+             max-width: $content-max-width;
+             .column{
+                   padding-left: .625rem;
+                   padding-right: 50px;         
+                .close {
+                        color: #000;
+                        font-size: 2rem;
+                        opacity: .8;
+                        font-family: $font-light;
+                        font-weight: 300;
+                        right: .25rem;
+                        color: #333;
+                        background:none;
+                        line-height: .9;
+                        opacity: .3;
+                        padding: 0 6px 4px;
+                        position: absolute;
+                        top: 42%;
+                        &:focus,
+                        &:active {
+                          outline: 1px dashed #666;
+                        }
+                    }
+                }
+             }
+        
+    }
+
+}
+// Top bar styling
+//
+.top-bar {
+    height: auto;
+    padding-bottom: 3px;
+    margin-bottom: 1.5rem;
+    background: $bga-brand-blue;
+    border-bottom: $bga-brand-orange .25rem solid;
+    .mobile-logo {
+        display: block;
+        margin: 0;
+        font-size: 1.65rem;
+        float: left;
+        padding-top: .47rem;
+        margin-left: .5rem;
+        line-height: 1.4;
+        position: relative;
+        font-family: $font-light;
+        height: 3.4rem;
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 300;
+
+            &::after {
+                  content: "";
+            }
+
+            strong {
+                font-family: $font-heading;
+                font-weight: 500;
+                font-style: normal;
+            }
+        }
+    }
+
+    .right {
+        a {
+            padding: 1.5rem 1rem;
+            &::after {
+                  content: "";
+            }
+
+            .fa {
+                font-size: 1.5rem;
+                position: relative;
+                top: 11px;
+                color: #FFF;
+            }
+        }
+    }
+}
+
+main, header {
+    margin: 0 auto;
+    position: relative;
+    max-width: $content-max-width;
+
+    .row {
+        max-width: 100%;
+
+        .column, .columns {
+            float: left;
+        }
+    }
+}
+// set global gutters
+main, header, footer, nav {
+    .row {
+        .column, .columns {
+            padding: 0 1.5rem;
+        }
+    }
+}
+
+header {
+    margin: 2rem auto 1rem;
+    border-bottom: none;
+    height: auto;
+    display: none;
+    a:focus,
+    a:active {
+        outline: 1px dotted #666;
+    }
+
+    a:after {
+        display: none !important;
+    }
+
+    #bga-logo {
+        max-width: 235px;
+    }
+
+    /*.sub-brand {
+        a, a:link, a:visited {
+            border-radius: $small-border-radius;
+            -webkit-border-radius: $small-border-radius;
+            display: block;
+            padding: 15px;
+            background: $brand-blue;
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover, a:focus, a:active {
+            background: $brand-hover-bg;
+            color: $brand-hover-fg;
+        }
+    }*/
+}
+nav {
+    position: relative;
+    top: 0;
+    max-width: 71.25rem;
+    margin: 0 auto;
+    .row {
+        max-width: 100%;
+    }
+    .breadcrumbs {
+        border: none;
+        display: table;
+        width: 100%;
+        list-style: none;
+        margin-left: 0;
+        overflow: visible;
+        background-color: #fff;
+        border-radius: 0;
+        padding: 1.5rem 0 .5rem 0;
+        border-bottom: 1px solid $color_celeste_approx;
+        list-style: none;
+
+        > *:before, > *:first-child:before, {
+            color: #666;
+            content: ">";
+            margin: 0 .45em;
+            position: relative;
+            top: 0px;
+            font-family: $font-light;
+            font-size: 1rem;
+        }
+
+        li {
+            letter-spacing: -0.016em;
+            font-weight: 700;
+            line-height: 1.5;
+            list-style: none;
+            text-decoration: none;
+            text-transform: none;
+
+            a {
+                text-decoration: none;
+                color: #333;
+                float: left;
+                font-size: 1rem;
+                font-family: $font-light;
+                top: -2px;
+                margin: 0;
+                text-transform: none;
+                &:hover, &:focus {
+                    color: $color_storm_dust_approx;
+                    background: none;
+                }
+            }
+            &:last-child {
+                font-weight: 400;
+                color: #333;
+                font-size: 1rem;
+
+                &:before {
+                    display: none;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+main {
+    margin-bottom: 4rem;
+    .row {
+        .column, .columns {
+            legend {
+                width: 100%;
+                padding-right: 40px;
+            }
+        }
+        .medium-8 {
+            padding-right: 2rem;
+        }
+        .answers {
+            margin-top: .5rem;
+        }
+    }
+}
+
+// Small medium breakpoints for layout
+// ------------------------------------------------------------------------------------------------------
+
+@media only screen and (min-width: $break-medium) {
+    .top-bar {
+        padding-bottom: 29px;
+        margin-bottom: 0;
+
+        h2.mobile-logo {
+            display: none;
+        }
+         .right {
+            display: none;
+        }
+    }
+
+     header {
+        height: 95px;
+        margin: 49px auto 10px;
+        display: block;
+        /*.sub-brand {
+            margin: 0px 0rem 1rem;
+            position: absolute;
+            top: -13px;
+            font-family: $font-light;
+            right: 20px;
+            a, a:link, a:visited {
+                display: inline-block;
+                padding: 0 0 20px 0;
+                margin: 0;
+                font-size: 120%;
+                background: transparent;
+                color: #000;
+                text-decoration: none;
+            }
+            a:hover, a:focus, a:active {
+                background: transparent;
+                color: black;
+                text-decoration: none;
+            }
+        }*/
+    }
+    .row .columns {
+        .columns {
+            padding: 0;
+        }
+        h1, legend {
+            padding: .5rem 40px .5rem 0;
+        }
+    }
+    nav .breadcrumbs{
+         padding: 1.9rem 0 .4rem 0;
+    }
+         
+}
+@media only screen and (min-width: $break-wide) {
+    main {
+        min-height: auto;
+    }
+    main, header, footer, nav {
+            .row .columns {
+            padding: 0 .625rem;
+        }
+    }
+}
+
+0
+// Footer - SCSS migrated from business.gov bundled assets
+// ------------------------------------------------------------------------------------------------------
+
+
+footer {
+    // footer and body absolute positioning fix
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: $footer-height;
+    // Chat now button
+    a.chat-now {
+        position: fixed;
+        right: 5px;
+        bottom: 5px;
+        background-color: $webchat-bg;
+        border: 1px solid $webchat-border;
+        color: $webchat-color;
+        font-size: 1rem;
+        font-weight: 500;
+        text-decoration: none;
+        width: 124px;
+        height: 40px;
+        padding-left: 1rem;
+        padding-top: 0.5rem;
+        &:before {
+            content: $fa-var-user;
+            font: normal normal normal 14px/1 FontAwesome;
+            width: 17.9px;
+            height: 19.5px;
+            margin-right: 0.5rem;
+            font-size: 1.25rem;
+        }
+        &:after {
+            content: "" !important;
+        }
+    }
+}
+
+.navigation-footer-legal {
+    background: $bga-brand-blue;
+    color: white;
+    padding-top: 3rem;
+    padding-bottom: 4.5rem;
+    .row {
+        max-width: $content-max-width;
+    }
+    .column, .columns {
+        position: relative;
+        padding-left: .625rem;
+        padding-right: .625rem;
+        float: left;
+    }
+
+    li {
+        margin-left: 1rem;
+        font-size: 1.125rem;
+        font-weight: normal;
+        padding-right: .75rem;
+        padding: 0.75rem 1em 0.75rem 0;
+        display: block;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        //remove external link icons
+        &:not([href*="mailto"])[href*="//"]:after {
+            display: none;
+        }
+    }
+
+    ul.legal {
+        margin-left: 0;
+        margin-bottom: 0;
+
+        li a {
+            font-family: $font-heading;
+        }
+    }
+
+    #bga-logo-title {
+        display: none;
+        strong {
+            font-family: $font-bold;
+        }
+    }
+
+    .logo {
+        display: block;
+        float: left;
+        width: 100%;
+        text-align: center;
+        margin-top: 4rem;
+
+        img {
+            width: 60%;
+            max-width: 284px;
+        }
+    }
+    .social {
+        display: -webkit-box;
+        /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;
+        /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Chrome */
+        display: flex;
+        /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        justify-content: space-between;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding-top: 4rem;
+        margin-bottom: 0;
+        li {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            padding-left: .75rem;
+            padding-right: .75rem;
+        }
+        .fa {
+            font-size: 3.5rem;
+        }
+
+        div {
+            display: none;
+        }
+    }
+}
+@media only screen and (min-width: $break-medium) { 
+   .navigation-footer-legal {
+	padding-top: 1.5rem;
+	li {
+		display: inline-block;
+		font-size: 1rem;
+		margin-left: 0;
+	}
+	.social {
+		float: left;
+		display: block;
+		justify-content: initial;
+		margin: 0;
+		padding: 0;
+		li {
+			padding: .75rem 1em .75rem 0;
+		}
+		.fa {
+			font-size: 3rem;
+		}
+	}
+	.logo {
+		display: none;
+	}
+	div#bga-logo-title {
+		display: inline-block;
+		position: relative;
+		margin: 0;
+		font-size: 1.75rem;
+        float: right;
+        padding-top: .47rem;
+        margin-left: .5rem;
+        line-height: 1.4;
+        font-family: $font-light;
+        height: 3.4rem;
+		a {
+			white-space: nowrap;
+            font-weight: 300;
+            strong{font-weight: 700;}
+		}
+	}
+}
+}
+
+
+// Iconography
+// ------------------------------------------------------------------------------------------------------
+/*
+.registration-tip {
+  background: $process-alert url(../img/ico-tip-26.png) no-repeat 1em 1em;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  padding: 0.1em 2em 0.25em 3em;
+  margin: 0 0 1.5em 0;
+}
+
+.grid-row + .registration-tip
+{
+	margin-top: 1.5em;
+}*/
+
+// Select registrations
+// ------------------------------------------------------------------------------------------------------
+/*
+.select-registrations {
+
+	fieldset {
+		margin: 0 0 0.5em 0;
+	}
+
+	button {
+		margin: 0 0 2em 0;
+	}
+
+	legend {
+		font-size: 170%;
+	}
+}*/
+
+// export results styling
+.results {
+    .export-options {
+        i {
+            padding-right: 5px;
+        }
+
+        a {
+            padding-right: 5px;
+            text-decoration: none;
+        }
+    }
+
+    ul.obligation {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+//.content-share-buttons a, .content-share-buttons button
+
+.content-share-buttons {
+	position: relative;
+	padding: 1rem 0;
+	background-color: white;
+	ul {
+        margin-left:0;
+		li {
+			float: left;
+			border: 1px solid #cccccc;
+			border-right: none;
+			list-style: none;
+            font-size: 0.95em;
+			padding: 0.75rem 0;
+			text-align: center;
+			width: 33.33333%;
+			&:first-child {
+				border-left: none;
+			}
+		}
+		&.share {
+			background-color: white;
+			position: absolute;
+			right: 0;
+			bottom: 0.55rem;
+			width: 100%;
+			z-index: -1;
+			&.is-showing {
+				bottom: -3.5rem;
+				z-index: 10;
+			}
+			li {
+				border-top: none;
+				border-left: none;
+				min-height: 3.5rem;
+                a {
+					font-size: 0.95em;
+                    display: inline-block;
+                    height: 40px;
+                    width: 50px;
+				}
+                &.facebook a {
+					padding-top: 17px;                   
+                    background:  url("/assets/app/img/btn-fb-like.png") left 14px no-repeat;
+				}
+				&.linkedin a {
+					padding-top: 17px;          
+                    background:  url("/assets/app/img/btn-linkedin.png")left 14px no-repeat;
+                    width: 61px;
+				}
+				&.twitter a {
+					padding-top: 17px;            
+                    background:  url("/assets/app/img/btn-twitter.png") left 14px no-repeat;
+                    width: 61px;
+				}
+				> div {
+					float: none !important;
+					display: block;
+				}
+			}
+		}
+		&.actions li {
+			border-top: none;
+		}
+	}
+	button {
+		border: none;
+		background: none;
+		padding: 0;
+		margin: 0;
+		font-size: 0.95em;
+	    color: #214d94;
+	    font-weight: normal;
+		&:disabled {
+			color: #666666;
+		}
+	}
+	a, button{
+		font-size: 0.95em;
+	    color: #214d94;
+	    font-weight: normal;
+		text-decoration: none;
+        &:hover, &:focus{
+            background: none;
+        }
+		&:last-child {
+			padding: 0;
+		}
+	}
+    a:not([href*="mailto"])[href*="//"]:after{
+            display:none;
+            padding-left: 0;
+            content: "";
+       }
+	hr {
+		margin: 0 0.625rem;
+		display: none;
+		border-top: 1px #cccccc solid;
+	}
+}
+@media only screen and(min-width: 40.0625em) {
+	.content-share-buttons {
+		hr {
+			display: block;
+		}
+		a {
+			font-size: 1rem;
+            &#email:after{
+                content: "";
+                display: none;
+
+            }
+		}
+		button {
+			font-size: 1rem;
+		}
+		ul {
+			li {
+				padding: 0.5rem;
+				border: none;
+			}
+			&.links {
+				width: 22rem;
+				padding-left: 1rem;
+				float: left;
+			}
+			&.actions {
+				width: 16rem;
+				padding-right: 1rem;
+				float: right;
+			}
+			&.share {
+				right: 3.5rem;
+				border: 1px solid #cccccc;
+				width: 20.5rem;
+				&.is-showing {
+					bottom: -2rem;
+				}
+				a {
+					font-size: 0.95em;
+				}
+				li {
+					width: 7rem;
+					min-height: 0;
+					&.linkedin {
+					    padding-top: 8px;
+						//padding-bottom: 0;
+					}
+					&.twitter {
+						padding-top: 8px;
+					    width: 6rem;
+					}
+				}
+			}
+		}
+	}
+}
+.questions {
+   fieldset {
+        label {
+            display: inline;
+        }
+    }
+    aside {
+        padding: 0 1.25em;
+
+        div.panel {
+            background-color: $blue-paler;
+            border-radius: 6px;
+            padding: 1rem;
+
+            h1 {
+                color: #000;
+                font-size: 1.4rem;
+            }
+
+            p {
+                margin: 0 0 0.5em 0;
+                line-height: 1.2em;
+            }
+        }
+    }
+    // sobrs style alert for information tips
+    div.registration-tip {
+        background: #efe8ce url(/Assets/App/img/ico-tip-26.png) no-repeat 1em 1em;
+        border: none;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        padding: 0.1em 2em 0.25em 3em;
+        margin: 1rem 0 0 0;
+
+        p {
+           display: block;
+            -webkit-margin-before: 1em;
+            -webkit-margin-after: 1em;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+        }
+    }
+    .buttons-content {
+        margin: 1em 0 2em;
+        .btn {
+            width: 47.6%;
+            margin-bottom: 1.5rem;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        button#next{margin-right: 0;}
+        button#results{
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width: $break-small) {
+    .questions .buttons-content {
+        display: table;
+        .btn, button#next, button#results {
+            width: auto;
+            float: none;
+            margin-right: 1rem;
+            margin-bottom: 0;
+        }
+    }
+}
+

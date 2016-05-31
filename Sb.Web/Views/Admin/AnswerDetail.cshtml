@@ -1,0 +1,29 @@
+﻿@model IList<IQuestion>
+
+@{
+    ViewBag.Title = "Answer Detail";
+}
+
+<div class="row questions">
+    <div class="small-12 columns">
+        <h1>@ViewBag.Title</h1>
+
+        @foreach (var question in Model)
+        {
+            <h2 id="@question.Id">@question.QuestionNumber. @question.Title</h2>
+            <table>
+                <tr>
+                    <th>Question</th>
+                    <th style="width:120px">Indication of</th>
+                </tr>
+                @foreach (var answer in question.AnswerList)
+                {
+                    <tr id="@answer.Id">
+                        <td>@answer.Title</td>
+                        <td>@answer.IndicationType</td>
+                    </tr>
+                }
+            </table>
+        }
+    </div>
+</div>

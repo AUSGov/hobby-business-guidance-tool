@@ -1,0 +1,14 @@
+﻿{
+    "Id": "2",
+    "Title": "You're unlikely to be running a business.",
+    "ObligationId": "OB101",
+    "IsEnabled": "true",
+    "Rules": [
+        {
+            "MemberName": "OutcomeType",
+            "Operator": "Equal",
+            "TargetValue": "Hobby"
+        }
+    ],
+    "MatchAnyRule": true
+}

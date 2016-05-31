@@ -1,0 +1,28 @@
+﻿{
+  "Id": "QN240",
+  "Title": "My creative work is:",
+  "ShortTitle": "Creative work?",
+  "IsEnabled": "true",
+  "QuestionType": "MultiSelect",
+  "AnswerList": [
+    {
+      "Id": "501",
+      "Title": "not for sale yet",
+      "Description": "",
+      "IndicationType": "Hobby",
+      "CssClass": "NoneOption"
+    },
+    {
+      "Id": "502",
+      "Title": "sold to people I know personally e.g. friends, family",
+      "Description": "",
+      "IndicationType": "Hobby"
+    },
+    {
+      "Id": "503",
+      "Title": "sold to the public e.g. at markets, online, retail, wholesale",
+      "Description": "",
+      "IndicationType": "Business"
+    }
+  ]
+}

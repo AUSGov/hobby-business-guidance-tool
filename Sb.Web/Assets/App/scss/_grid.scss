@@ -1,0 +1,128 @@
+// ----- 	12 column grid framework
+// ------------------------------------------------------------------------------------------------------
+
+// This file is not currently being imported in the style.scss
+// Main container for all
+// ------------------------------------------------------------------------------------------------------
+
+.grid-container {
+	margin: 0 auto;
+	padding: 0 0 0 1%;
+	max-width: $content-max-width;
+}
+
+.grid-row {
+	clear: both;
+	margin-bottom: 0;
+	
+	 p {
+		margin-top: 0.5em;
+	}
+}
+.grid-row-shaded {
+	background-color: $blue-pale;
+	border-top: 1px solid $blue-pale-border;
+	padding: 1em;
+}
+.grid-row-block {
+	border-top: 1px solid $blue-pale-border;	
+	padding: 1em;
+}
+.grid-row-lines {
+	border-bottom: 1px solid $blue-pale-border;	
+	border-top: 1px solid $blue-pale-border;
+	padding: 1.5em 0;	
+}
+.grid-row-reveal {
+	padding: 1em;
+}
+.grid-row-no-line-bottom {
+	border-bottom: 0;
+}
+.grid-row-no-line-top {
+	border-top: 0;
+}
+.grid-row-no-line {
+	padding: 1em 0 0.25em 0;
+}
+.grid-row-no-line input[type=radio] {
+	margin: 0;
+}
+.grid-row-last {
+	border-bottom: 1px solid $blue-pale-border;
+}
+
+/* grid-row-child must be used as a child within grid-row. It allows multiple row sets to be grouped together. */
+.grid-row-child {
+	clear: both;
+	padding: 0;
+	margin-bottom: 0;
+	background-color: none;
+	border: none;
+}
+
+
+// Common columns definitions
+// ------------------------------------------------------------------------------------------------------
+
+.col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12 {
+	float: left;
+	margin: 0 3% 0 0;
+	
+	img {
+		width: 100%;
+		height: auto;
+		display: block;		
+	}
+	
+	img.ico-external {
+		width: auto;
+		display: inline;
+	}
+
+	&.last {
+		margin: 0;
+	}
+}
+
+.col1 { width: 5.5%; }
+.col2 { width: 14%; }
+.col3 { width: 22.5%; }
+.col4 { width: 31%; }
+.col5 { width: 39.5%; }
+.col6 { width: 48%; }
+.col7 { width: 56.5%; }
+.col8 { width: 65%; }
+.col9 { width: 73.5%; }
+.col10 { width: 82%; }
+.col11 { width: 90.5%; }
+.col12 { width: 99%; margin: 0; }
+
+
+// Left margins for legends
+// ------------------------------------------------------------------------------------------------------
+
+@media only screen and (min-width: $break-large) {
+	/* Apply this where validation icon needs to appear to left of element */
+	.margin0 { margin-left: 32px; }
+}
+@media only screen and (min-width: $break-large) {
+	.margin1 { margin-left: 8.5%; }
+	.margin2 { margin-left: 17%; }
+	.margin3 { margin-left: 25.5%; }
+	.margin4 { margin-left: 34%; }
+	.margin5 { margin-left: 42.5%; }
+	.margin6 { margin-left: 51%; }
+}
+
+
+// Small devices
+// ------------------------------------------------------------------------------------------------------
+
+@media all and (max-width: $break-medium) {
+	.col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11 {
+		float: none;
+		width: 99%;
+		margin: 0;
+	}
+}

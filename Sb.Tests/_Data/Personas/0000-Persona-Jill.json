@@ -1,0 +1,15 @@
+﻿{
+  "Id": "Jill",
+  "OutcomeType": "Hobby",
+  "IsEnabled": "true",
+  "IncludedAnswerList": [
+    {
+      "QuestionId": "QN130",
+      "Answer": "502"
+    },
+    {
+      "QuestionId": "QN140",
+      "Answer": "603,602"
+    }
+  ]
+}

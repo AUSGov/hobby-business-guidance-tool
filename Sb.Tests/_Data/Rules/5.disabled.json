@@ -1,0 +1,14 @@
+﻿{
+    "Id": "5",
+    "Title": "Declare income to DHS",
+    "ObligationId": "OB300",
+    "IsEnabled": "false",
+    "Rules": [
+        {
+            "MemberName": "QN220",
+            "Operator": "Equal",
+            "TargetValue": "a6d4100a685a449281f391fbfebcaf2d"
+        }
+    ],
+    "MatchAnyRule": true
+}

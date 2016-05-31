@@ -1,0 +1,8 @@
+﻿@model IObligation
+
+@if (Model != null)
+{
+    <div id="@Model.Id" class="outcome">
+        @Html.Raw(@Model.Description)
+    </div>
+}

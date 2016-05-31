@@ -1,0 +1,18 @@
+﻿@model IQuestion
+
+@{
+    var hasAnsweredAllQuestions = Model.QuestionCount <= Request.Cookies[Constants.CookieName.Answers]?.Values.Count;
+}
+
+<div class="default-button-container" aria-hidden="true">
+    <button type="submit" name="next" tabindex="-1" title="Next" class="validateAnswers">Next</button>
+</div>
+<div class="buttons-content">
+    <button type="submit" id="@Constants.SubmitType.Previous" name="submit" value="@Constants.SubmitType.Previous" class="btn" formnovalidate>Previous</button>
+    <button type="submit" id="@Constants.SubmitType.Next" name="submit" value="@Constants.SubmitType.Next" class="btn btn-default validateAnswers">Next</button>
+
+    @if (hasAnsweredAllQuestions)
+    {
+        <button type="submit" id="@Constants.SubmitType.Results" name="submit" value="@Constants.SubmitType.Results" class="btn validateAnswers">View my results</button>
+    }
+</div>

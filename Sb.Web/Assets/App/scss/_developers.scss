@@ -1,0 +1,247 @@
+// ----- Developers use for additions or overrides. UI team then refactor this into appropriate SASS file
+// ------------------------------------------------------------------------------------------------------
+
+.validation-summary-valid {
+    display: none;
+}
+.validation-summary-errors {
+    display: block;
+}
+.date {
+    width: 10em !important;
+}
+
+/* 
+    RF: Any dependencies related to external libraries (ie: jQuery UI) will need to be checked here when these components are refactored to meet WCAG and usability requirements.
+    For example, if jQuery UI is not used for date picker, time picker or file upload then the following classes can be removed. 
+*/
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: #fefefe !important;
+}
+.ui-datepicker select {
+    padding: 0 !important;
+}
+.ui-datepicker .ui-datepicker-title {
+    line-height: 1.6em !important;
+}
+.file-upload-progress {
+    height: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+.file-upload-progress-bar-success {
+    background-color: #5cb85c;
+}
+.file-upload-progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    background-color: #428bca;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+}
+.file-input-button input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    direction: ltr;
+    cursor: pointer;
+}
+.file-input-btn-success:hover, .file-input-btn-success:focus, .file-input-btn-success:active, .file-input-btn-success.active, .open>.dropdown-toggle.file-input-btn-success {
+  background: #000000;
+  border: 1px solid #000000;
+  color: #ffffff !important;
+  -webkit-box-shadow: 0 0 2px 0 rgba(47,45,43,.5);
+  box-shadow: 0 0 2px 0 rgba(47,45,43,.75);
+    text-decoration: none;
+}
+.file-input-button {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+.file-input-btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+.file-input-btn {
+  background-color: white;
+  border: 1px solid #367ab3;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  color: #367ab3;
+  cursor: pointer;
+  line-height: 1em;
+  padding: 0.5em 0.75em;
+  text-align: center;
+  text-decoration: none !important;
+  white-space: nowrap;
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: normal;
+  margin-right: 0.5em;
+}
+
+.anzsicDropDown {
+    background: #eee !important;
+    width: 500px;
+    overflow: auto;
+    max-height: 400px;
+    max-width: 600px;
+    _height: expression(this.scrollHeight>399?"400px":"auto");
+    border: 1px solid gray;
+}
+.anzsicList {
+    margin: 0px;
+    list-style-type: none;
+    padding: 0px;
+}
+.anzsicDropDown ul li {
+    cursor: default;
+    padding: .4em .4em .4em 1.2em;
+    display: list-item;
+    font-size: 90%;
+}
+.anzsicList li.focused {
+    background-color: #d3d3d3;
+}
+.matchText {
+    font-weight: bold;
+}
+.anzsicSectionHeading {
+    font-weight: bold;
+    font-size: 110%;
+}
+
+input[type="password"] {
+    border: 1px solid #bbbbbb !important;
+    border-radius: 4px;
+    color: #666666;
+    margin: 0.4em 0.25em 0.4em 0;
+    max-width: 24em;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+/* RF: The following classes should not be required and need checking before being removed or refactored */
+/*
+.strong label {
+    font-weight: bold;
+}
+input[disabled]:hover, input[disabled]:focus, input[disabled]:active, select[disabled]:hover, select[disabled]:focus, select[disabled]:active {
+    background-color: #d6d3ce;
+    box-shadow: none;
+}
+input[readonly], input[readonly]:hover, input[readonly]:focus, input[readonly]:active {
+    background-color: #d6d3ce;
+    box-shadow: none;
+}
+legend label {
+    font-weight: bold;
+}
+.uppercase {
+    text-transform: uppercase
+}
+.dashboard-container {
+    background-color: #e7e7e7;
+    padding: 1em 1em 0.25em 1em;
+    margin-top: 2em;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+.dashboard-container-h2 {
+    font-size: 120%;
+    font-family: open_sansregular,helvetica,arial,sans-serif;
+    line-height: 1.2em;
+    margin: 1em 0 0.75em 0;
+    padding: 0 !important;
+    background: none !important;
+    text-transform: none;
+    font-weight: normal;
+}
+.dashboard-container table {
+    border-spacing: 0;
+    border: 1px solid #e7e7e7;
+    width: 100%;
+    margin-bottom: 2em;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+.dashboard-container caption {
+    background: none;
+    padding: 0; 
+    text-align: left;
+    font-size: 130%;
+    margin: 0.5em 0;
+    font-weight: normal;
+}
+.dashboard-container th:first-child {
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+.dashboard-container th:last-child {
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+.dashboard-container .status-detail {
+    width: 43%;
+}
+.dashboard-container .status-item {
+    width: 27%;
+}
+.dashboard-container th {
+    background-color: white;
+    border-bottom: 2px solid #e7e7e7;
+    padding: 1.5em 0.5em 1.5em 1em;
+}
+.dashboard-container td {
+    line-height: 1.8em;
+}
+.dashboard-container td {
+    vertical-align: top;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: white;
+}
+.custom-controls p>label {
+    line-height: 38px;
+    color: #444;
+    padding: 0;
+    -moz-transition: color 1s ease;
+    -o-transition: color 1s ease;
+    -webkit-transition: color 1s ease;
+    transition: color 1s ease;
+}
+*/
+
+

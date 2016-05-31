@@ -1,0 +1,16 @@
+﻿{
+    "Id": "3",
+    "Title": "You're likely to be running a business",
+    "ObligationId": "OB100",
+    "IsEnabled": "true",
+    "Rules": [
+        {
+            "MemberName": "OutcomeType",
+            "Operator": "Equal",
+            "TargetValue": "Business"
+        }
+    ],
+    "MatchAnyRule": true
+}
+
+

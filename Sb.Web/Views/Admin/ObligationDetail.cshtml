@@ -1,0 +1,41 @@
+﻿@model IList<IObligation>
+
+@{
+    ViewBag.Title = "Obligation Detail";
+}
+
+<div class="row questions">
+    <div class="small-12 columns">
+        <h1>@ViewBag.Title</h1>
+
+        <h2>Outcomes</h2>
+        @foreach (var obligation in Model.Where(x => x.ObligationType == ObligationType.Outcome))
+        {
+            <div class="panel" id="@obligation.Id">
+                <h3>@obligation.Title (@obligation.Id)</h3>
+                @Html.Raw(@obligation.Description)
+            </div>
+        }
+        <hr/>
+
+        <h2>Mandatory</h2>
+        @foreach (var obligation in Model.Where(x => x.ObligationType == ObligationType.Mandatory))
+        {
+            <div class="panel" id="@obligation.Id">
+                <h3>@obligation.Title (@obligation.Id)</h3>
+                @Html.Raw(@obligation.Description)
+            </div>
+        }
+        <hr />
+
+        <h2>Optional</h2>
+        @foreach (var obligation in Model.Where(x => x.ObligationType == ObligationType.Optional))
+        {
+            <div class="panel" id="@obligation.Id">
+                <h3>@obligation.Title (@obligation.Id)</h3>
+                @Html.Raw(@obligation.Description)
+            </div>
+        }
+        <hr />
+    </div>
+</div>

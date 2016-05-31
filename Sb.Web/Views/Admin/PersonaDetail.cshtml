@@ -1,0 +1,66 @@
+﻿@model PersonaDetailModel
+
+@{
+    ViewBag.Title = "Persona Detail";
+}
+
+<div class="row personas">
+    <div class="small-12 columns">
+        <h1>@ViewBag.Title</h1>
+        @foreach (var persona in Model.Personas)
+        {
+            <h2>@persona.Id - <em>@persona.OutcomeType</em></h2>
+
+            foreach (var question in Model.Questions)
+            {
+                var included = persona.IncludedAnswerList.FirstOrDefault(x => x.QuestionId == question.Id);
+                var excluded = persona.ExcludedAnswerList.FirstOrDefault(x => x.QuestionId == question.Id);
+
+                if (included != null || excluded != null)
+                {
+                    <h3>@question.QuestionNumber. @question.Title</h3>
+                    <ul class="no-bullet">
+                        @if (included != null)
+                        {
+                            foreach (var answer in included.Answer.Split(','))
+                            {
+                                <li><i class="fa fa-check" aria-hidden="true"></i> @question.AnswerList.First(a => a.Id == answer).Title</li>
+                            }
+                        }
+                        @if (excluded != null)
+                        {
+                            foreach (var answer in excluded.Answer.Split(','))
+                            {
+                                <li><i class="fa fa-close" aria-hidden="true"></i> @question.AnswerList.First(a => a.Id == answer).Title</li>
+                            }
+                        }
+                    </ul>
+                }
+            }
+
+            <hr />
+        }
+
+
+        @*@foreach (var persona in Model.Personas)
+        {
+            <h2>@persona.Id - <em>@persona.OutcomeType</em></h2>
+
+            foreach (var questionAnswerPair in persona.IncludedAnswerList)
+            {
+                var question = Model.QuestionManager.GetQuestion(questionAnswerPair.QuestionId);
+                var answers = questionAnswerPair.Answer.Split(',');
+
+                <h3>@question.QuestionNumber. @question.Title</h3>
+                <ul class="no-bullet">
+                    @foreach (var answer in answers)
+                    {
+                        <li>[x] @question.AnswerList.First(a => a.Id == answer).Title</li>
+                    }
+                </ul>
+            }
+
+            <hr/>
+        }*@
+    </div>
+</div>

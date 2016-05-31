@@ -1,0 +1,31 @@
+﻿{
+  "Id": "PS160",
+  "OutcomeType": "Business",
+  "IsEnabled": "true",
+  "IncludedAnswerList": [
+    {
+      "QuestionId": "QN130",
+      "Answer": "405"
+    },
+    {
+      "QuestionId": "QN240",
+      "Answer": "503"
+    },
+    {
+      "QuestionId": "QN140",
+      "Answer": "603"
+    },
+    {
+      "QuestionId": "QN180",
+      "Answer": "705"
+    },
+    {
+      "QuestionId": "QN190",
+      "Answer": "804"
+    },
+    {
+      "QuestionId": "QN210",
+      "Answer": "904"
+    }
+  ]
+}

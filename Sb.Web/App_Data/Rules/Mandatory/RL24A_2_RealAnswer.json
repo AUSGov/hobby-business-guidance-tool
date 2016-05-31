@@ -1,0 +1,19 @@
+﻿{
+  "Id": "RL24A_2",
+  "Title": "Trigger real answer for like a business (but not wants to be business)",
+  "ObligationId": "OB24A",
+  "IsEnabled": "true",
+  "Rules": [
+    {
+      "MemberName": "OutcomeType",
+      "Operator": "Equal",
+      "TargetValue": "Business"
+    },
+    {
+      "MemberName": "QN120",
+      "Operator": "NotContains",
+      "TargetValue": "302"
+    }
+  ],
+  "MatchAnyRule": false
+}

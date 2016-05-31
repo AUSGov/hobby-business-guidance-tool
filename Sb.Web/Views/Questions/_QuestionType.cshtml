@@ -1,0 +1,18 @@
+﻿@model IQuestion
+
+@switch (Model.QuestionType)
+{
+    case QuestionType.SingleSelect:
+        @Html.Partial(MVC.Questions.Views.ViewNames._SingleSelect);
+        break;
+
+    case QuestionType.MultiSelect:
+        @Html.Partial(MVC.Questions.Views.ViewNames._MultiSelect);
+        break;
+
+    case QuestionType.Unknown:
+        throw new ArgumentException("Invalid QuestionType");
+
+    default:
+        throw new ArgumentOutOfRangeException();
+}

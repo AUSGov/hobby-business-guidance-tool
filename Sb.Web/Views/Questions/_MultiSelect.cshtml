@@ -1,0 +1,24 @@
+﻿@model IQuestion
+
+<h1>@Model.Title</h1>
+<fieldset class="custom-controls">
+    <legend class="show-for-sr">@Model.ShortTitle</legend>
+    @Html.Raw(Model.Description)
+    <div class="answers">
+        @foreach (var answer in Model.AnswerList)
+        {
+            <div>
+                <input id="@answer.Id" type="checkbox" name="@Model.Id" value="@answer.Id" checked="@(Model.Answer?.Contains(answer.Id))" class="@answer.CssClass"/>
+                <label for="@answer.Id">
+                    @answer.Title
+                </label>
+                @if (!string.IsNullOrWhiteSpace(answer.Description))
+                {
+                    <div id="tip-@answer.Id" class="registration-tip hide" role="status">
+                        @Html.Raw(answer.Description)
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</fieldset>

@@ -1,0 +1,19 @@
+﻿{
+  "Id": "2",
+  "Title": "Q2-Title",
+  "Description": "",
+  "IsEnabled": "true",
+  "QuestionType": "SingleSelect",
+  "AnswerList": [
+    {
+      "Id": "1",
+      "Title": "No",
+      "Description": ""
+    },
+    {
+      "Id": "2",
+      "Title": "Yes",
+      "Description": ""
+    }
+  ]
+}

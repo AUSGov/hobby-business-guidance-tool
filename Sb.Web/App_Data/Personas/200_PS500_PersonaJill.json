@@ -1,0 +1,42 @@
+﻿{
+  "Id": "PS500",
+  "OutcomeType": "Hobby",
+  "IsEnabled": "true",
+  "IncludedAnswerList": [
+    {
+      "QuestionId": "QN130",
+      "Answer": "401,402,403,404"
+    },
+    {
+      "QuestionId": "QN240",
+      "Answer": "501,502"
+    },
+    {
+      "QuestionId": "QN140",
+      "Answer": "601"
+    },
+    {
+      "QuestionId": "QN180",
+      "Answer": "701,702"
+    },
+    {
+      "QuestionId": "QN190",
+      "Answer": "801,802"
+    },
+    {
+      "QuestionId": "QN210",
+      "Answer": "901,902,903"
+    }
+  ],
+  "ExcludedAnswerList": [
+    {
+      "QuestionId": "QN240",
+      "Answer": "503"
+    },
+    {
+      "QuestionId": "QN140",
+      "Answer": "602,603"
+    }
+  ]
+}
+

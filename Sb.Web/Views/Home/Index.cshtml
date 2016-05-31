@@ -1,0 +1,51 @@
+﻿@model LandingModel
+
+@{
+    ViewBag.Title = null;
+}
+
+<div class="landing">
+    <div class="row">
+        <div class="small-12 columns">
+            <h1>Are you an artist, creative or maker and unsure about your government obligations?</h1>
+            <p>This tool is for people who are getting money or intend to get money from creating things such as jewellery, paintings, candles, textiles, baked goods etc. We’ll ask you a few questions about what you do when you’re making your creative works. </p>
+
+            <p><strong>Based on your answers, the tool will show you:</strong></p>
+            <ul>
+                <li>if you're similar to someone who is undertaking a hobby</li>
+                <li>if you're similar to someone who is in business</li>
+                <li>if each answer is an indicator of a hobby or a business</li>
+                <li>a list of obligations to help you decide what to do next.</li>
+            </ul>
+
+            <p>The tool is a guide only. It’s about what you’re doing at this point in time. If your circumstances change, please use this tool again. It’s important that you seek legal, financial or business advice as needed.</p>
+            @Html.ActionLink("Get started", MVC.Questions.Index(Model.FirstQuestionId), new { @class = "btn btn-default" })
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="small-12 columns">
+            <h2>Not an artist, creative or maker?</h2>
+            <p>
+                We plan on extending this service to other industries over time. In the meantime, you can find out about the <a href="https://www.business.gov.au/info/plan-and-start/start-your-business/a-business-or-a-hobby">differences between a hobby or business</a>.
+            </p>
+        </div>
+    </div>
+</div>
+@Html.Partial(MVC.Shared.Views.ViewNames._ExportOptions)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

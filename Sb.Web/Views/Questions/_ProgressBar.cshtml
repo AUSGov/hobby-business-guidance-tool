@@ -1,0 +1,13 @@
+﻿@model IQuestion
+
+@{
+    var percentageComplete = Math.Truncate(Model.QuestionNumber / ((double)Model.QuestionCount + 1) * 100);
+}
+
+<p class="meter-description">
+    <strong>Step <span id="stepNo">@Model.QuestionNumber</span>:</strong>
+    <span id="percentCompleted">@percentageComplete</span>% complete
+</p>
+<div class="meter">
+    <span id="percentMeter" style="width: @percentageComplete%"></span>
+</div>

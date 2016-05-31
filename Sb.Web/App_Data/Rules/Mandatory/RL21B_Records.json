@@ -1,0 +1,14 @@
+﻿{
+  "Id": "RL21B",
+  "Title": "Records for business",
+  "ObligationId": "OB21B",
+  "IsEnabled": "true",
+  "Rules": [
+    {
+      "MemberName": "OutcomeType",
+      "Operator": "Equal",
+      "TargetValue": "Business"
+    }
+  ],
+  "MatchAnyRule": true
+}

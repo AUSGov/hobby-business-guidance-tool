@@ -1,0 +1,24 @@
+﻿{
+    "Id": "1",
+    "Title": "Test rule always",
+    "ObligationId": "OB000",
+    "IsEnabled": "true",
+    "Rules": [
+        {
+            "MemberName": "OutcomeType",
+            "Operator": "Equal",
+            "TargetValue": "Business"
+        },
+        {
+            "MemberName": "OutcomeType",
+            "Operator": "Equal",
+            "TargetValue": "Hobby"
+        },
+        {
+            "MemberName": "OutcomeType",
+            "Operator": "Equal",
+            "TargetValue": "Unsure"
+        }
+    ],
+    "MatchAnyRule": true
+}

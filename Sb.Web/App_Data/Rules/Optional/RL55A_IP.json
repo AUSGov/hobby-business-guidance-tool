@@ -1,0 +1,13 @@
+﻿{
+  "Id": "RL55A",
+  "ObligationId": "OB55A",
+  "IsEnabled": "true",
+  "Rules": [
+    {
+      "MemberName": "QN110",
+      "Operator": "NotContains",
+      "TargetValue": "203"
+    }
+  ],
+  "MatchAnyRule": true
+}

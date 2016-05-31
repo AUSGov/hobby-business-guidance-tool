@@ -1,0 +1,27 @@
+﻿/*href customisations
+
+a, a:visited {
+    color: #000;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #767676;
+}
+
+a.active {
+    color: #000;
+}*/
+
+/*button customisations*/
+
+a.button, button {
+    color: #FFF;
+    text-decoration: none;
+    background-color: #214d94;
+}
+
+a.button:hover, button:hover, button:active {
+    background-color: #1a3e76;
+}
+

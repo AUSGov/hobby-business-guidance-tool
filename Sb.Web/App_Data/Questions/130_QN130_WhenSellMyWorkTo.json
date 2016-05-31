@@ -1,0 +1,41 @@
+﻿{
+  "Id": "QN130",
+  "Title": "When I offer my creative work:",
+  "ShortTitle": "Charge amount?",
+  "IsEnabled": "true",
+  "QuestionType": "SingleSelect",
+  "AnswerList": [
+    {
+      "Id": "401",
+      "Title": "I don’t charge",
+      "Description": "",
+      "IndicationType": "Hobby"
+    },
+    {
+      "Id": "402",
+      "Title": "I never ask for money, but if someone offered a gift, I wouldn’t say no",
+      "Description": "",
+      "IndicationType": "Hobby"
+    },
+    {
+      "Id": "403",
+      "Title": "I only charge for the cost of the materials",
+      "Description": "",
+      "IndicationType": "Hobby"
+    },
+    {
+      "Id": "404",
+      "Title": "I charge for the cost of the materials, plus a little extra to cover additional costs e.g. cover costs for petrol, electricity, tools etc.",
+      "Description": "",
+      "IndicationType": "Hobby"
+    },
+    {
+      "Id": "405",
+      "Title": "I charge much more than the cost of the materials and labour e.g. I cover my costs and make a profit",
+      "Description": "",
+      "IndicationType": "Business"
+    }
+  ]
+}
+
+

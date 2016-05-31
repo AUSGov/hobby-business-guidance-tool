@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DE9EC023-184A-4FBC-B706-F44B316BE16E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sb.Tests</RootNamespace>
+    <AssemblyName>Sb.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Moq, Version=4.2.1510.2205, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.2.1510.2205\lib\net40\Moq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Sc.AssemblyInfo.cs">
+      <Link>Properties\Sc.AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Controllers\SeoControllerTest.cs" />
+    <Compile Include="Controllers\ErrorControllerTest.cs" />
+    <Compile Include="Controllers\AdminControllerTest.cs" />
+    <Compile Include="Controllers\ResultControllerTest.cs" />
+    <Compile Include="Controllers\QuestionControllerTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controllers\HomeControllerTest.cs" />
+    <Compile Include="Services\ExtensionTest.cs" />
+    <Compile Include="Services\AppSettingsReaderTest.cs" />
+    <Compile Include="Services\FileContentValidationTest.cs" />
+    <Compile Include="Services\FileObligationLoaderTest.cs" />
+    <Compile Include="Services\FilePersonaLoaderTest.cs" />
+    <Compile Include="Services\FileRulesetLoaderTest.cs" />
+    <Compile Include="Services\ObligationManagerTest.cs" />
+    <Compile Include="Services\AnswerManagerTest.cs" />
+    <Compile Include="Services\PersonaManagerTest.cs" />
+    <Compile Include="Services\QuestionManagerTest.cs" />
+    <Compile Include="Services\FileQuestionLoaderTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.config" />
+    <Content Include="_Data\Obligations\_Description\130.html" />
+    <Content Include="_Data\Obligations\_Description\120.html" />
+    <Content Include="_Data\Questions\_Description\3.html" />
+    <Content Include="_Data\Questions\_MoreInfo\3.html" />
+    <Content Include="_Data\Questions\_MoreInfo\2.html" />
+    <Content Include="_Data\Questions\_Description\2.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="_Data\Obligations\100.json" />
+    <Content Include="_Data\Obligations\120.json" />
+    <Content Include="_Data\Obligations\130.json" />
+    <Content Include="_Data\Obligations\500-disabled.json" />
+    <Content Include="_Data\Personas\0000-Persona-Jill.json" />
+    <None Include="_Data\Questions\5-disabled.json" />
+    <None Include="_Data\Questions\4.json" />
+    <None Include="_Data\Questions\3.json" />
+    <None Include="_Data\Questions\2.json" />
+    <None Include="_Data\Questions\1.json" />
+    <Content Include="_Data\Rules\1.json" />
+    <Content Include="_Data\Rules\2.json" />
+    <Content Include="_Data\Rules\3.json" />
+    <Content Include="_Data\Rules\4.json" />
+    <Content Include="_Data\Rules\5.disabled.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sb.Entities\Sb.Entities.csproj">
+      <Project>{a5712329-6f1b-4303-9f7b-637d7667c1c6}</Project>
+      <Name>Sb.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sb.Interfaces\Sb.Interfaces.csproj">
+      <Project>{dc3ee7d1-1b1d-456e-9bca-420bef86859b}</Project>
+      <Name>Sb.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sb.Service\Sb.Services.csproj">
+      <Project>{83a4913d-bb3a-429c-a6be-9ad7dd237ac8}</Project>
+      <Name>Sb.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sb.Web\Sb.Web.csproj">
+      <Project>{D7D702F7-505E-48CC-A76F-94B264E82591}</Project>
+      <Name>Sb.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,12 @@
+﻿
+// (foundation) panel to show for validation errors
+.panel.validation {
+    background: #e4e5e5 url(/Assets/App/img/ico-alert-red.png) no-repeat 1em 1em;
+    padding-left: 4rem;
+
+    img {
+        float: left;
+        position: relative;
+        left: -3rem;
+    }
+}

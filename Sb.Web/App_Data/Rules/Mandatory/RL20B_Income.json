@@ -1,0 +1,14 @@
+﻿{
+  "Id": "RL20B",
+  "Title": "Trigger income for business",
+  "ObligationId": "OB20B",
+  "IsEnabled": "true",
+  "Rules": [
+    {
+      "MemberName": "OutcomeType",
+      "Operator": "Equal",
+      "TargetValue": "Business"
+    }
+  ],
+  "MatchAnyRule": true
+}

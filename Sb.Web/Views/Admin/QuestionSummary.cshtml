@@ -1,0 +1,21 @@
+﻿@model IList<IQuestion>
+
+@{
+    ViewBag.Title = "Question Summary";
+}
+
+<div class="row">
+    <div class="small-12 columns">
+        <h1>@ViewBag.Title</h1>
+        <ol>
+            @foreach (var question in Model)
+            {
+                <li>
+                    <p id="@question.Id">
+                        @question.Title
+                    </p>
+                </li>
+            }
+        </ol>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+﻿{
+  "Id": "QN110",
+  "Title": "Have you already registered for any of these for your creative work?",
+  "ShortTitle": "Already have?",
+  "IsEnabled": "true",
+  "QuestionType": "MultiSelect",
+  "AnswerList": [
+    {
+      "Id": "201",
+      "Title": "Australian business number (ABN)",
+      "Description": "<p>If you have an Australian business number (ABN), you don’t need to apply for a new one. However, you will need to update your ABN details if anything changes. You can use <a href='http://abr.business.gov.au/'>ABNLookup</a> to check if your ABN is current.</p>",
+      "IndicationType": "Neither"
+    },
+    {
+      "Id": "202",
+      "Title": "business name registered with the Australian Securities and Investments Commission (ASIC)",
+      "Description": "",
+      "IndicationType": "Neither"
+    },
+    {
+      "Id": "203",
+      "Title": "intellectual property (IP) e.g. trade mark, patent, design or plant breeder’s rights",
+      "Description": "",
+      "IndicationType": "Neither"
+    },
+    {
+      "Id": "204",
+      "Title": "goods and services tax (GST)",
+      "Description": "",
+      "IndicationType": "Neither"
+    },
+    {
+      "Id": "205",
+      "Title": "pay as you go instalments (PAYG) to make tax payments",
+      "Description": "",
+      "IndicationType": "Neither"
+    },
+    {
+      "Id": "206",
+      "Title": "none of the above",
+      "Description": "",
+      "IndicationType": "Neither",
+      "CssClass": "NoneOption"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+﻿{
+  "Id": "QN180",
+  "Title": "I offer my creative things under:",
+  "ShortTitle": "Offer under?",
+  "IsEnabled": "true",
+  "QuestionType": "SingleSelect",
+  "AnswerList": [
+    {
+      "Id": "701",
+      "Title": "I don't use a name for my work",
+      "Description": "",
+      "IndicationType": "Hobby"
+    },
+    {
+      "Id": "702",
+      "Title": "my name e.g. Simon Smith",
+      "Description": "",
+      "IndicationType": "Either"
+    },
+    {
+      "Id": "703",
+      "Title": "a variation of my name e.g. Simon Smith’s cupcakes",
+      "Description": "",
+      "IndicationType": "Either"
+    },
+    {
+      "Id": "704",
+      "Title": "a name other than my own that is not formally registered, like a label, website or brand",
+      "Description": "",
+      "IndicationType": "Either"
+    },
+    {
+      "Id": "705",
+      "Title": "a registered trade mark or registered business name",
+      "Description": "",
+      "IndicationType": "Business"
+    }
+  ]
+}

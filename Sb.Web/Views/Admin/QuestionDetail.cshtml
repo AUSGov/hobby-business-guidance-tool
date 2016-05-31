@@ -1,0 +1,37 @@
+﻿@model IList<IQuestion>
+
+@{
+    ViewBag.Title = "Question Detail";
+}
+
+<div class="row questions">
+    <h1>@ViewBag.Title</h1>
+    @foreach (var question in Model)
+    {
+        <div class="small-8 columns" id="@question.Id">
+            <h2>
+                @question.QuestionNumber. @question.Title
+            </h2>
+            <ul class="no-bullet">
+                @foreach (var answer in question.AnswerList)
+                {
+                    if (question.QuestionType == QuestionType.MultiSelect)
+                    {
+                        <li><i class="fa fa-square-o" aria-hidden="true"></i> @answer.Title</li>
+                    }
+                    else if (question.QuestionType == QuestionType.SingleSelect)
+                    {
+                        <li><i class="fa fa-circle-thin" aria-hidden="true"></i> @answer.Title</li>
+                    }
+                }
+            </ul>
+        </div>
+        if (!string.IsNullOrEmpty(question.MoreInfo))
+        {
+            <aside class="small-4 columns panel">
+                @Html.Raw(question.MoreInfo)
+            </aside>
+        }
+        <hr/>
+    }
+</div>

@@ -1,0 +1,23 @@
+﻿{
+    "Id": "RL57A",
+    "ObligationId": "OB57A",
+    "IsEnabled": "true",
+    "Rules": [
+        {
+            "MemberName": "OutcomeType",
+            "Operator": "Equal",
+            "TargetValue": "Business"
+        },
+        {
+            "MemberName": "OutcomeType",
+            "Operator": "Equal",
+            "TargetValue": "Hobby"
+        },
+        {
+            "MemberName": "OutcomeType",
+            "Operator": "Equal",
+            "TargetValue": "Unsure"
+        }
+    ],
+    "MatchAnyRule": true
+}

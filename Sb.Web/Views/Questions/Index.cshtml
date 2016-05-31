@@ -1,0 +1,27 @@
+﻿@model IQuestion
+
+@{
+    ViewBag.Title = "Step " + @Model.QuestionNumber;
+}
+
+<div class="row questions">
+    <div class="small-12 columns">
+        @using (Html.BeginForm())
+        {
+            @Html.Partial(MVC.Questions.Views.ViewNames._ProgressBar)
+            @Html.Partial(MVC.Questions.Views.ViewNames._ValidationError)
+            @Html.Partial(MVC.Questions.Views.ViewNames._QuestionType) 
+            @Html.Partial(MVC.Questions.Views.ViewNames._Buttons)
+            @Html.HiddenFor(x => x.Id)
+            @Html.AntiForgeryToken()
+        }
+        @if (!string.IsNullOrEmpty(Model.MoreInfo))
+        {
+            <aside class="panel callout radius" role="status">
+                @Html.Raw(Model.MoreInfo)
+            </aside>
+        }
+
+    </div>
+</div>
+

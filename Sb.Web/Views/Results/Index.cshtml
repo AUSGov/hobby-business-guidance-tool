@@ -1,0 +1,17 @@
+﻿@model ResultModel
+
+@{
+    ViewBag.Title = "Next steps";
+}
+
+<div class="row results">
+    <div class="small-12 columns">
+        <h1>@ViewBag.Title</h1>
+        @Html.Partial(MVC.Results.Views.ViewNames._WhatAreYou, Model.Obligations.FirstOrDefault(x => x.ObligationType == ObligationType.Outcome))
+        @Html.Partial(MVC.Results.Views.ViewNames._Answers, Model)
+        @Html.Partial(MVC.Results.Views.ViewNames._MandatoryObligations, Model.Obligations.Where(x => x.ObligationType == ObligationType.Mandatory).ToList())
+        @Html.Partial(MVC.Results.Views.ViewNames._OptionalObligations, Model.Obligations.Where(x => x.ObligationType == ObligationType.Optional).ToList())
+        @Html.Partial(MVC.Results.Views.ViewNames._IfThingsChange, Model)
+        @Html.Partial(MVC.Shared.Views.ViewNames._ExportOptions)
+    </div>
+</div>
