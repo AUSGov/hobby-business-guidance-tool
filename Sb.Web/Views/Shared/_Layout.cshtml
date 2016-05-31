@@ -44,7 +44,7 @@
     @Html.Partial(MVC.Shared.Views._SiteTakeover, ConfigurationManager.AppSettings[Constants.AppSettings.SiteTakeoverHtml])
     <div id="wrapper">
         @Html.Partial(MVC.Shared.Views._Topbar)
-        <header>
+        <header role="banner">
             <div class="row">
                 <div class="small-12 columns">
                     <a href="http://www.business.gov.au/"><img src="@Links.Assets.App.img.header_logo_png" alt="Business.gov.au logo" id="bga-logo" /></a>
@@ -56,7 +56,7 @@
             @Html.Partial(MVC.Shared.Views._DisabledCookies)
             @RenderBody()
         </main>
-        <footer>
+        <footer role="contentinfo">
             @Html.Partial(MVC.Shared.Views._Footer)
             <a href="#" class="chat-now">Chat Now</a>
         </footer>
