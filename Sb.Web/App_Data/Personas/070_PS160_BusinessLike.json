@@ -17,15 +17,15 @@
     },
     {
       "QuestionId": "QN180",
-      "Answer": "705"
+      "Answer": "702,705"
     },
     {
       "QuestionId": "QN190",
-      "Answer": "804"
+      "Answer": "803,804"
     },
     {
       "QuestionId": "QN210",
-      "Answer": "904"
+      "Answer": "902,904"
     }
   ]
 }

@@ -1,4 +1,8 @@
-﻿<div class="content-share-buttons row hide-on-print" role="toolbar">
+﻿@{
+    const string rootSiteUrl = "https://start.business.gov.au";
+}
+
+<div class="content-share-buttons row hide-on-print" role="toolbar">
     <hr />
     <ul class="links">
         <li>
@@ -24,21 +28,21 @@
         <li>
             <a href="javascript:void(0)" title="Share this article" class="js-share" id="share">
                 <span class="fa fa-share"></span>
-                Share</a>
+                Share
             </a>
             <ul class="share" aria-expanded="false">
                 <li class="facebook">
-                    <a href="#" id="facebook" onclick="return popup('https://www.facebook.com/sharer/sharer.php?u=https://start.dev.business.gov.au')" target="_blank" tabindex="-1">
+                    <a href="#" id="facebook" onclick="return popup('https://www.facebook.com/sharer/sharer.php?u=@rootSiteUrl')" target="_blank" tabindex="-1">
                         <span class="show-for-sr">Facebook Like (opens new window)</span>
                     </a>
                 </li>
                 <li class="linkedin">
-                    <a href="#" id="linkedin" onclick="return popup('http://www.linkedin.com/shareArticle?url=https://start.dev.business.gov.au/')" target="_blank" tabindex="-1">
+                    <a href="#" id="linkedin" onclick="return popup('http://www.linkedin.com/shareArticle?url=@rootSiteUrl')" target="_blank" tabindex="-1">
                         <span class="show-for-sr">Linkedin Share (opens new window)</span>
                     </a>
                 </li>
                 <li class="twitter">
-                    <a href="#" id="twitter" onclick="return popup('https://twitter.com/intent/tweet?&url=https://start.dev.business.gov.au')" target="_blank" tabindex="-1">
+                    <a href="#" id="twitter" onclick="return popup('https://twitter.com/intent/tweet?&url=@rootSiteUrl')" target="_blank" tabindex="-1">
                         <span class="show-for-sr">Twitter Tweet (opens new window)</span>
                     </a>
                 </li>

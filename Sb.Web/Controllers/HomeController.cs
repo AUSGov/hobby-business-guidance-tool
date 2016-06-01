@@ -8,8 +8,6 @@ namespace Sb.Web.Controllers
     [HandleError]
     public partial class HomeController : Controller
     {
-        private const int DayInSeconds = 60 * 60 * 24;
-
         private readonly IQuestionManager _questionManager;
         private readonly IAnswerManager _answerManager;
         private readonly IObligationManager _obligationManager;
@@ -43,7 +41,6 @@ namespace Sb.Web.Controllers
             _personaManager = personaManager;
         }
 
-        [OutputCache(VaryByParam = "none", Duration = DayInSeconds)]
         public virtual ActionResult Index()
         {
             return View(new LandingModel { FirstQuestionId = _questionManager.GetNextQuestion().Id });
