@@ -4,6 +4,7 @@
 <fieldset class="custom-controls">
     <legend class="show-for-sr">@Model.ShortTitle</legend>
     @Html.Raw(Model.Description)
+    <p>(Please select as many that apply) </p>
     <div class="answers">
         @foreach (var answer in Model.AnswerList)
         {

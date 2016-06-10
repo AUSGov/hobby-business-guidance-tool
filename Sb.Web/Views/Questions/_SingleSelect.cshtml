@@ -4,6 +4,7 @@
     <legend class="show-for-sr">@Model.ShortTitle</legend>
     @Html.Raw(Model.Description)
     <div class="answers">
+        <p>(Please select one)</p>
         @foreach (var answer in Model.AnswerList)
         {
             <div>

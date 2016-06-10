@@ -6,7 +6,7 @@
     chatParams["ORG_NAME"] = "DIIS";
     chatParams["ICHANNEL_NAME"] = "DOI_BUS_SPECIALIST";
     chatParams["SITE_CSS"] = "https://extranets.innovation.gov.au/Style%20Library/BGA-webchat/BGA-webchat.css";
-    chatParams["SITE_LOGO"] = window.location.origin + "/Assets/App/img/header_logo.png";
+    chatParams["SITE_LOGO"] = window.location.origin + "/Assets/App/img/header-logo.png";
     chatParams["SOURCE_URL"] = window.location.href;
 
     var internalParams = [];
