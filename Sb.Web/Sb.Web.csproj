@@ -538,6 +538,7 @@
     <Content Include="Views\Shared\_SiteTakeover.cshtml" />
     <Content Include="Views\Shared\_SitecoreFxmBeacon.cshtml" />
     <Content Include="Views\Shared\_PageTitle.cshtml" />
+    <Content Include="Views\Results\_RateThis.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\Questions\_Description\" />

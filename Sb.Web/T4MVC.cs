@@ -113,6 +113,9 @@ namespace Links
                 public static readonly string bga_logo_footer_png = Url("bga_logo_footer.png");
                 public static readonly string bga_logo_footer_beta_png = Url("bga_logo_footer_beta.png");
                 public static readonly string brand_png = Url("brand.png");
+                public static readonly string btn_fb_like_png = Url("btn-fb-like.png");
+                public static readonly string btn_linkedin_png = Url("btn-linkedin.png");
+                public static readonly string btn_twitter_png = Url("btn-twitter.png");
                 public static readonly string content_bullet_png = Url("content-bullet.png");
                 public static readonly string favicon114_png = Url("favicon114.png");
                 public static readonly string favicon120_png = Url("favicon120.png");
@@ -185,7 +188,6 @@ namespace Links
                 public static readonly string _grid_scss = Url("_grid.scss");
                 public static readonly string _layout_scss = Url("_layout.scss");
                 public static readonly string _modules_scss = Url("_modules.scss");
-                public static readonly string _normalize_scss = Url("_normalize.scss");
                 public static readonly string _print_scss = Url("_print.scss");
                 public static readonly string _typography_scss = Url("_typography.scss");
                 public static readonly string _variables_scss = Url("_variables.scss");

@@ -355,7 +355,7 @@ input.larger {
                 font-weight: 600;                
             } 
             &:focus +label{
-               outline: $focus-checkradio-outline solid 2px;
+               outline: rgb(94, 158, 215) solid 2px;
             }  
             &:checked +label:after{
                 width: 17px;

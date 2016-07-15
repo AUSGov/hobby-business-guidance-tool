@@ -12,6 +12,20 @@
         @Html.Partial(MVC.Results.Views.ViewNames._MandatoryObligations, Model.Obligations.Where(x => x.ObligationType == ObligationType.Mandatory).ToList())
         @Html.Partial(MVC.Results.Views.ViewNames._OptionalObligations, Model.Obligations.Where(x => x.ObligationType == ObligationType.Optional).ToList())
         @Html.Partial(MVC.Results.Views.ViewNames._IfThingsChange, Model)
+        @Html.Partial(MVC.Results.Views.ViewNames._RateThis)
         @Html.Partial(MVC.Shared.Views.ViewNames._ExportOptions)
     </div>
 </div>
+
+@section scripts
+{
+<script>
+    $(".rate-this button").on("click", function() {
+        $("div.rate-this").replaceWith(function () {
+            return $("<div class='rated' aria-live='polite'>Thanks for your feedback. If you have any ideas on how we can improve, we’d love to hear them. Just follow the feedback link below.</div>");
+        });
+    });
+</script>
+}
+
+

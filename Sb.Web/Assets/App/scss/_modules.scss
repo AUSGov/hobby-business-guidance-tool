@@ -291,6 +291,43 @@ button.closeSystemMessage {
 	}
 }
 
+// Rate this : User feedback 
+// ------------------------------------------------------------------------------------------------------
+
+.user-feedback{
+    .rate-this{
+        text-align: center;
+        .question-title{
+            display: block;
+            margin-bottom:1rem;
+            font-family: $font-light;
+        }
+        .btn{
+            margin-bottom:0;
+            margin-right: .2rem;
+        }
+    }
+    .rated{
+        font-family: $font-light;
+    }
+}
+
+@media only screen and (min-width: $break-small) {
+     .user-feedback{
+        .rate-this{
+            .question-title{
+                display: inline-block;
+                margin-right:1rem;
+                margin-bottom: 0;
+            } 
+            .btn{
+                margin-right:.5rem;
+            }      
+        }
+
+    }
+}
+
 // Print
 // ------------------------------------------------------------------------------------------------------
 

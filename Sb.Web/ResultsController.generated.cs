@@ -100,6 +100,7 @@ namespace Sb.Web.Controllers
                 public readonly string _IfThingsChange = "_IfThingsChange";
                 public readonly string _MandatoryObligations = "_MandatoryObligations";
                 public readonly string _OptionalObligations = "_OptionalObligations";
+                public readonly string _RateThis = "_RateThis";
                 public readonly string _WhatAreYou = "_WhatAreYou";
                 public readonly string Index = "Index";
             }
@@ -107,6 +108,7 @@ namespace Sb.Web.Controllers
             public readonly string _IfThingsChange = "~/Views/Results/_IfThingsChange.cshtml";
             public readonly string _MandatoryObligations = "~/Views/Results/_MandatoryObligations.cshtml";
             public readonly string _OptionalObligations = "~/Views/Results/_OptionalObligations.cshtml";
+            public readonly string _RateThis = "~/Views/Results/_RateThis.cshtml";
             public readonly string _WhatAreYou = "~/Views/Results/_WhatAreYou.cshtml";
             public readonly string Index = "~/Views/Results/Index.cshtml";
         }
