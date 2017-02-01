@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Text;
 
 namespace Sb.Tests.Services
 {
@@ -119,6 +120,11 @@ namespace Sb.Tests.Services
         {
             // Arrange
             var doc = new HtmlDocument();
+            var sb = new StringBuilder();
+
+            ServicePointManager.ServerCertificateValidationCallback += (sender, certificate, chain, sslPolicyErrors) => true;
+            ServicePointManager.Expect100Continue = true;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
             var obligations = _obligationLoader.GetObligations()
                 .Where(o => !string.IsNullOrWhiteSpace(o.Description));
@@ -168,12 +174,19 @@ namespace Sb.Tests.Services
                         finally
                         {
                             response?.Close();
-                            // Assert
-                            Assert.IsNotNull(response, "Broken link: " + link + " in " + obligation.Id);
+
+                            if (response == null)
+                            {
+                                sb.AppendLine("Broken link: " + link + " in " + obligation.Id);
+                            }
                         }
                     }
                 }
             }
+
+            // Assert
+            var message = sb.ToString();
+            Assert.AreEqual(string.Empty, message, message);
         }
 
         [TestMethod]
